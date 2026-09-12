@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Graph-RAG Demo — TFM</title>
+<style>
+  :root { --border:#d0d4da; --muted:#68707c; --accent:#1a5fb4; --bg:#f7f8fa; }
+  * { box-sizing: border-box; }
+  body { font-family: "Segoe UI", system-ui, sans-serif; margin: 0; background: var(--bg); color: #1c2128; }
+  main { max-width: 1080px; margin: 0 auto; padding: 1.2rem 1.5rem 4rem; }
+  h1 { font-size: 1.25rem; margin: .4rem 0 .2rem; }
+  .sub { color: var(--muted); font-size: .85rem; margin-bottom: 1.2rem; }
+  fieldset { border: 1px solid var(--border); border-radius: 8px; background: #fff; padding: 1rem; margin: 0 0 1rem; }
+  legend { font-size: .8rem; color: var(--muted); padding: 0 .4rem; }
+  label { display: block; font-size: .8rem; color: var(--muted); margin: .6rem 0 .2rem; }
+  textarea, input[type=text], select { width: 100%; padding: .5rem; border: 1px solid var(--border); border-radius: 6px; font: inherit; }
+  textarea { resize: vertical; min-height: 3.2rem; }
+  .searchwrap { position: relative; }
+  .dropdown { position: absolute; z-index: 10; left: 0; right: 0; background: #fff; border: 1px solid var(--border); border-radius: 6px; box-shadow: 0 4px 14px rgba(0,0,0,.12); max-height: 16rem; overflow-y: auto; }
+  .dropdown button { display: block; width: 100%; text-align: left; padding: .45rem .6rem; border: 0; background: none; font: inherit; cursor: pointer; }
+  .dropdown button:hover { background: #eef3fa; }
+  .dropdown .qid { color: var(--muted); font-size: .78rem; }
+  .chips { display: flex; flex-wrap: wrap; gap: .4rem; margin-top: .5rem; }
+  .chip { display: inline-flex; align-items: center; gap: .35rem; background: #e8eef7; border: 1px solid #c3d3ea; border-radius: 999px; padding: .15rem .3rem .15rem .6rem; font-size: .82rem; }
+  .chip b { font-weight: 600; }
+  .chip .qid { color: var(--muted); font-size: .75rem; }
+  .chip button { border: 0; background: #c9d6ea; border-radius: 999px; width: 1.15rem; height: 1.15rem; line-height: 1; cursor: pointer; font-size: .75rem; }
+  .rowflex { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .rowflex > div { flex: 1 1 280px; }
+  .runbar { display: flex; align-items: center; gap: 1rem; margin: .4rem 0 1.2rem; }
+  #run { background: var(--accent); color: #fff; border: 0; border-radius: 6px; padding: .55rem 1.6rem; font: inherit; font-weight: 600; cursor: pointer; }
+  #run:disabled { background: #9fb4cf; cursor: default; }
+  .hint { color: var(--muted); font-size: .78rem; }
+  .warn { color: #9a6700; font-size: .8rem; }
+  table { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid var(--border); border-radius: 8px; overflow: hidden; }
+  th, td { text-align: left; padding: .55rem .7rem; border-top: 1px solid var(--border); vertical-align: top; font-size: .86rem; }
+  thead th { border-top: 0; background: #eef1f5; font-size: .78rem; color: var(--muted); }
+  td.num { text-align: right; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .cfg { white-space: nowrap; font-weight: 600; }
+  .cfg small { display: block; font-weight: 400; color: var(--muted); }
+  .badge { display: inline-block; border-radius: 4px; padding: .05rem .4rem; font-size: .72rem; margin-left: .35rem; vertical-align: middle; }
+  .b-abst { background: #fff3cd; border: 1px solid #e5c56a; color: #7a5b00; }
+  .b-ref  { background: #e9ecef; border: 1px solid #c6ccd2; color: #495058; }
+  .b-trunc{ background: #ffe0e0; border: 1px solid #e5a1a1; color: #8a1f1f; }
+  .b-pool { background: #e2e8f0; border: 1px solid #b9c4d2; color: #3d4a5c; }
+  .errrow { color: #8a1f1f; }
+  .errrow .etype { font-weight: 600; }
+  details { margin-top: .3rem; }
+  summary { cursor: pointer; font-size: .78rem; color: var(--accent); }
+  .evd { border: 1px solid var(--border); border-radius: 6px; background: #fafbfc; margin-top: .4rem; padding: .5rem .7rem; max-height: 22rem; overflow: auto; }
+  .evd h4 { margin: .2rem 0 .4rem; font-size: .76rem; color: var(--muted); font-weight: 600; }
+  .evd pre { margin: 0; white-space: pre-wrap; font-size: .78rem; font-family: Consolas, monospace; }
+  .evd .chunk { border-bottom: 1px dashed var(--border); padding: .35rem 0; font-size: .8rem; }
+  .elapsed { color: var(--muted); font-size: .78rem; }
+  footer { position: fixed; bottom: 0; left: 0; right: 0; background: #fff; border-top: 1px solid var(--border); padding: .4rem 1.5rem; font-size: .76rem; color: var(--muted); display: flex; gap: 1.4rem; flex-wrap: wrap; }
+  footer .bad { color: #9a6700; font-weight: 600; }
+  .dot { display: inline-block; width: .55rem; height: .55rem; border-radius: 50%; margin-right: .3rem; }
+  .dot.loading { background: #e5c56a; } .dot.ready { background: #2da44e; } .dot.error { background: #cf222e; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Graph-RAG on Wikidata — demonstration interface</h1>
+  <div class="sub">Runs the four evaluated configurations on one question and shows each answer
+    beside the retrieved context supplied to the model. Presets are illustrative reruns on the
+    tuning split: they reproduce the evaluated question annotations, not frozen results.</div>
+
+  <fieldset>
+    <legend>Input</legend>
+    <div class="rowflex">
+      <div>
+        <label for="preset">Load a Mintaka DEV-200 preset (optional)</label>
+        <select id="preset"><option value="">— manual input —</option></select>
+      </div>
+      <div>
+        <label for="search">Add entity (search Wikidata by name)</label>
+        <div class="searchwrap">
+          <input type="text" id="search" placeholder="e.g. Blade Runner" autocomplete="off">
+          <div class="dropdown" id="dropdown" hidden></div>
+        </div>
+      </div>
+    </div>
+    <label for="question">Question</label>
+    <textarea id="question" placeholder="Who directed Blade Runner?"></textarea>
+    <div class="chips" id="chips"></div>
+    <div class="hint" id="modehint"></div>
+  </fieldset>
+
+  <div class="runbar">
+    <button id="run">Run all four configurations</button>
+    <span class="hint">Up to 5 rate-paced LLM calls; uncached entities fetch live from
+      Wikidata/Wikipedia — a run can take minutes.</span>
+  </div>
+  <div class="warn" id="warn" hidden></div>
+
+  <table>
+    <thead><tr>
+      <th style="width:13rem">Configuration</th>
+      <th>Answer</th>
+      <th class="num" style="width:6.5rem">Context words</th>
+      <th class="num" style="width:8.5rem">Tokens (in/out)</th>
+      <th style="width:15rem">Retrieved context supplied to the model</th>
+    </tr></thead>
+    <tbody id="rows"></tbody>
+  </table>
+</main>
+
+<footer id="foot"></footer>
+
+<script>
+"use strict";
+
+const CONFIGS = [
+  ["base_llm_abstain", "C1 — Base LLM", "no retrieval"],
+  ["rag",              "C2 — Text RAG", "Wikipedia chunks"],
+  ["graph_rag",        "C3 — Graph-RAG", "Wikidata statements"],
+  ["rerank",           "C4 — Graph-RAG + condensing", "statements → prose"],
+];
+
+const el = id => document.getElementById(id);
+let chips = [];          // {qid, label, phrase}
+let presetId = null;
+let presets = new Map();
+let running = false;
+let statusInfo = null;
+
+// ---- helpers (textContent only — model/Wikidata text never hits innerHTML) --
+
+function node(tag, cls, text) {
+  const n = document.createElement(tag);
+  if (cls) n.className = cls;
+  if (text !== undefined) n.textContent = text;
+  return n;
+}
+
+function badge(cls, text) { return node("span", "badge " + cls, text); }
+
+// ---- status footer ---------------------------------------------------------
+
+async function refreshStatus() {
+  try {
+    statusInfo = await (await fetch("/api/status")).json();
+  } catch { return; }
+  const f = el("foot");
+  f.replaceChildren();
+  const dot = node("span", "dot " + statusInfo.embedder_state);
+  const emb = node("span", "", "embedding model: " + statusInfo.embedder_state
+    + (statusInfo.embedder_error ? " — " + statusInfo.embedder_error : ""));
+  emb.prepend(dot);
+  f.append(
+    node("span", "", "model: " + statusInfo.model),
+    ...(statusInfo.model_is_reference ? [] : [node("span", "bad", "⚠ non-reference model")]),
+    ...(statusInfo.non_reference_axes.length
+        ? [node("span", "bad", "⚠ non-reference axes: " + statusInfo.non_reference_axes.join(", "))] : []),
+    node("span", "", "rate limit: " + (statusInfo.rpm || "off") + " rpm"),
+    node("span", "", "retrieval: " + (statusInfo.strict ? "strict" : "NON-STRICT")),
+    emb,
+  );
+  if (statusInfo.embedder_state === "loading") setTimeout(refreshStatus, 3000);
+}
+
+// ---- presets ---------------------------------------------------------------
+
+async function loadPresets() {
+  let data;
+  try { data = await (await fetch("/api/presets")).json(); } catch { return; }
+  for (const p of data.presets) {
+    presets.set(p.id, p);
+    const opt = node("option", "", "[" + p.complexity + " · " + p.category + "] " + p.question);
+    opt.value = p.id;
+    el("preset").append(opt);
+  }
+}
+
+function applyPreset(id) {
+  const p = presets.get(id);
+  if (!p) { presetId = null; updateModeHint(); return; }
+  presetId = id;
+  el("question").value = p.question;
+  chips = p.entities.map(e => ({ qid: e.qid, label: e.label, phrase: e.mention }));
+  renderChips();
+  updateModeHint();
+}
+
+function dropToManual() {
+  if (presetId !== null) {
+    presetId = null;
+    el("preset").value = "";
+    updateModeHint();
+  }
+}
+
+function updateModeHint() {
+  el("modehint").textContent = presetId
+    ? "Preset mode: reproduces the evaluated question annotations (illustrative rerun on the tuning split; no metrics)."
+    : "Manual linked-entity mode: your search phrase stands in for the question's mention — not evaluation-exact.";
+}
+
+// ---- entity search ---------------------------------------------------------
+
+// Responses can arrive out of order: a slow reply for an earlier phrase must
+// never repaint a later one's dropdown, because the chip records the phrase
+// that produced the QID and a mismatched pair is silently wrong.
+let searchTimer = null;
+let searchSeq = 0;
+let searchAbort = null;
+
+el("search").addEventListener("input", () => {
+  clearTimeout(searchTimer);
+  const q = el("search").value.trim();
+  if (!q) {
+    searchSeq++;                       // invalidate whatever is in flight
+    if (searchAbort) searchAbort.abort();
+    el("dropdown").hidden = true;
+    return;
+  }
+  searchTimer = setTimeout(() => doSearch(q), 300);
+});
+
+async function doSearch(q) {
+  const seq = ++searchSeq;
+  if (searchAbort) searchAbort.abort();
+  const ctl = new AbortController();
+  searchAbort = ctl;
+  let data;
+  try {
+    const resp = await fetch("/api/search?q=" + encodeURIComponent(q),
+                             { signal: ctl.signal });
+    data = await resp.json();
+    if (!resp.ok) throw new Error(data.error || resp.status);
+  } catch (e) {
+    if (seq !== searchSeq) return;     // superseded: not this query's error
+    showDropdown([node("div", "qid", "search unavailable: " + e.message)]);
+    return;
+  }
+  if (seq !== searchSeq) return;       // a newer query owns the dropdown
+  if (!data.candidates.length) { showDropdown([node("div", "qid", "no matches")]); return; }
+  showDropdown(data.candidates.map(c => {
+    const b = node("button");
+    b.append(node("b", "", c.label), node("span", "qid", "  " + (c.description || "") + "  (" + c.qid + ")"));
+    b.addEventListener("click", () => {
+      if (chips.length >= 20) return;
+      if (!chips.some(ch => ch.qid === c.qid)) {
+        chips.push({ qid: c.qid, label: c.label, phrase: q });
+        renderChips();
+        dropToManual();
+      }
+      el("search").value = "";
+      el("dropdown").hidden = true;
+    });
+    return b;
+  }));
+}
+
+function showDropdown(nodes) {
+  const d = el("dropdown");
+  d.replaceChildren(...nodes);
+  d.hidden = false;
+}
+document.addEventListener("click", e => {
+  if (!el("dropdown").contains(e.target) && e.target !== el("search")) el("dropdown").hidden = true;
+});
+
+function renderChips() {
+  const box = el("chips");
+  box.replaceChildren(...chips.map((c, i) => {
+    const chip = node("span", "chip");
+    chip.title = 'mentioned as "' + c.phrase + '"';
+    chip.append(node("b", "", c.label), node("span", "qid", c.qid));
+    const x = node("button", "", "×");
+    x.addEventListener("click", () => { chips.splice(i, 1); renderChips(); dropToManual(); });
+    chip.append(x);
+    return chip;
+  }));
+}
+
+el("question").addEventListener("input", dropToManual);
+el("preset").addEventListener("change", e => applyPreset(e.target.value));
+
+// ---- run flow --------------------------------------------------------------
+
+function makeRow(cfgId, label, subtitle) {
+  const tr = node("tr");
+  tr.id = "row-" + cfgId;
+  const cfg = node("td", "cfg", label);
+  cfg.append(node("small", "", subtitle));
+  tr.append(cfg, node("td", "", "—"), node("td", "num", "—"), node("td", "num", "—"), node("td", "", "—"));
+  return tr;
+}
+
+function resetRows() {
+  el("rows").replaceChildren(...CONFIGS.map(c => makeRow(...c)));
+}
+
+el("run").addEventListener("click", runAll);
+
+async function runAll() {
+  if (running) return;
+  // Snapshot the inputs ONCE — mid-run edits must not diverge the configs.
+  const snapshot = {
+    preset_id: presetId,
+    question: el("question").value.trim(),
+    entities: chips.map(c => ({ qid: c.qid, label: c.label, phrase: c.phrase })),
+  };
+  const w = el("warn");
+  w.hidden = true;
+  if (!snapshot.preset_id && !snapshot.question) {
+    w.textContent = "Type a question (or pick a preset) first."; w.hidden = false; return;
+  }
+  if (!snapshot.preset_id && snapshot.entities.length === 0) {
+    w.textContent = "No entities linked — C2–C4 will run with an empty retrieval pool "
+      + "(this mirrors the 83 anchor-less Mintaka questions)."; w.hidden = false;
+  }
+  running = true;
+  el("run").disabled = true;
+  resetRows();
+  for (const [cfgId] of CONFIGS) {
+    await runOne(cfgId, snapshot);
+  }
+  running = false;
+  el("run").disabled = false;
+  refreshStatus();
+}
+
+async function runOne(cfgId, snapshot) {
+  const tr = el("row-" + cfgId);
+  const answerCell = tr.children[1];
+  const t0 = performance.now();
+  answerCell.replaceChildren(node("span", "elapsed", "running… 0 s"));
+  const tick = setInterval(() => {
+    const e = answerCell.querySelector(".elapsed");
+    if (e) e.textContent = "running… " + Math.round((performance.now() - t0) / 1000) + " s";
+  }, 1000);
+
+  const payload = snapshot.preset_id
+    ? { config: cfgId, preset_id: snapshot.preset_id }
+    : { config: cfgId, question: snapshot.question, entities: snapshot.entities };
+
+  let data;
+  try {
+    const resp = await fetch("/api/run", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(payload),
+    });
+    data = await resp.json();
+    if (!resp.ok) throw new Error(data.error || ("HTTP " + resp.status));
+  } catch (e) {
+    clearInterval(tick);
+    renderError(tr, "RequestFailed", e.message, null);
+    return;
+  }
+  clearInterval(tick);
+  renderRow(tr, cfgId, data);
+}
+
+function renderError(tr, type, message, hint) {
+  const cell = tr.children[1];
+  cell.replaceChildren();
+  cell.classList.add("errrow");
+  cell.append(node("span", "etype", type + ": "), node("span", "", message));
+  if (hint) cell.append(node("div", "hint", hint));
+}
+
+function renderRow(tr, cfgId, d) {
+  const [ , answerCell, ctxCell, tokCell, evdCell] = tr.children;
+
+  if (d.error) {
+    renderError(tr, d.error.type, d.error.message, d.error.hint || null);
+  } else {
+    answerCell.replaceChildren(node("span", "", d.answer || "(empty answer)"));
+    if (d.abstained) answerCell.append(badge("b-abst", "abstained (sentinel)"));
+    if (d.refusal_shaped) answerCell.append(badge("b-ref", "refusal-shaped (non-compliant)"));
+    if (d.finish_reason === "length") answerCell.append(badge("b-trunc", "truncated"));
+  }
+
+  ctxCell.textContent = (d.context_words === null || d.context_words === undefined)
+    ? "—" : String(d.context_words);
+  if (d.pool_size === 0) ctxCell.append(badge("b-pool", "empty pool"));
+
+  tokCell.textContent = d.usage_unavailable
+    ? "usage unavailable"
+    : (d.tokens ? d.tokens.prompt + " / " + d.tokens.completion : "—");
+
+  evdCell.replaceChildren(...evidenceNodes(cfgId, d));
+}
+
+function evidenceNodes(cfgId, d) {
+  if (cfgId === "base_llm_abstain") return [node("span", "hint", "no retrieval — parametric answer only")];
+  const ev = d.evidence || {};
+  const det = node("details");
+  det.append(node("summary", "", "show retrieved context"));
+  const box = node("div", "evd");
+
+  if (cfgId === "rag") {
+    box.append(node("h4", "", (ev.chunks || []).length + " ranked chunks"));
+    for (const c of ev.chunks || []) box.append(node("div", "chunk", c));
+    if ((ev.articles || []).length) {
+      box.append(node("h4", "", "candidate source articles (retrieval pool, not per-chunk provenance)"));
+      for (const a of ev.articles) box.append(node("div", "chunk", a.title + " (" + a.qid + ", rev " + a.revision_id + ", " + a.n_chunks + " chunks)"));
+    }
+  } else if (cfgId === "graph_rag") {
+    box.append(node("h4", "", (ev.statements || []).length + " ranked statement lines"));
+    const pre = node("pre", "", (ev.statements || []).join("\n"));
+    box.append(pre);
+  } else {
+    box.append(node("h4", "", "top-" + (ev.top_facts || []).length + " ranked facts (condenser input)"));
+    box.append(node("pre", "", (ev.top_facts || []).join("\n")));
+    box.append(node("h4", "", "condensed prose (what the answering model saw)"));
+    box.append(node("pre", "", ev.condensed || ""));
+    if (ev.condense_fallback) box.append(badge("b-trunc", "fallback: raw facts served"));
+    if (ev.condense_finish_reason === "length") box.append(badge("b-trunc", "condensation truncated"));
+  }
+  det.append(box);
+  return [det];
+}
+
+// ---- init ------------------------------------------------------------------
+
+resetRows();
+updateModeHint();
+refreshStatus();
+loadPresets();
+</script>
+</body>
+</html>

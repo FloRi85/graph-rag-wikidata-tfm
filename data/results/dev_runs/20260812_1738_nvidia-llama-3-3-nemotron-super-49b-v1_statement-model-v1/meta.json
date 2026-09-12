@@ -1,0 +1,137 @@
+{
+ "run_id": "20260812_1738",
+ "slug": "statement-model-v1",
+ "purpose": "First DEV-200 under the statement model: qualifiers, ranks (preferred+normal), structural datatype filtering, units, time precision, aliases/descriptions, and C2 z-normalisation. Supersedes the variant-F reference for C2/C3/C4; C1 is the unchanged control.",
+ "documented_at": "2026-08-12T18:43:51",
+ "sample": {
+  "file": "data/questions/mintaka_sample_dev_200.json",
+  "n": 200,
+  "sha256": "0e27b5ac23a885500324a15e3a90958606dae10e5d0c7e53612f4cc42ac629c3"
+ },
+ "arms": {
+  "base_llm_abstain": {
+   "summary": {
+    "n": 200,
+    "graded": 200,
+    "errors": 0,
+    "abstention_pct": 12.0,
+    "correct_pct": 67.5,
+    "hallucination_pct": 20.0,
+    "other_pct": 0.5,
+    "truncated": 1,
+    "median_answer_words": 2
+   }
+  },
+  "rag": {
+   "summary": {
+    "n": 200,
+    "graded": 200,
+    "errors": 0,
+    "abstention_pct": 38.0,
+    "correct_pct": 56.0,
+    "hallucination_pct": 6.0,
+    "other_pct": 0.0,
+    "truncated": 1,
+    "median_answer_words": 4
+   }
+  },
+  "graph_rag": {
+   "summary": {
+    "n": 200,
+    "graded": 200,
+    "errors": 0,
+    "abstention_pct": 53.0,
+    "correct_pct": 41.5,
+    "hallucination_pct": 5.5,
+    "other_pct": 0.0,
+    "truncated": 0,
+    "median_answer_words": 7
+   }
+  },
+  "rerank": {
+   "summary": {
+    "n": 200,
+    "graded": 200,
+    "errors": 0,
+    "abstention_pct": 40.0,
+    "correct_pct": 46.5,
+    "hallucination_pct": 8.5,
+    "other_pct": 5.0,
+    "truncated": 0,
+    "median_answer_words": 3
+   }
+  }
+ },
+ "operational": {
+  "workers": 3,
+  "calls": 800,
+  "truncated": 2,
+  "started": "20260812_173846"
+ },
+ "notes": "",
+ "specs": {
+  "git": {
+   "sha": "13ce35fdc6173dd76697dcdce11af8bcf8822330",
+   "branch": "snapshot-20260716-full",
+   "dirty": true,
+   "dirty_files": [
+    "ata/analysis/gold_qid_existence.json",
+    "data/results/dev_runs/20260812_1737_nvidia-llama-3-3-nemotron-super-49b-v1_smoke-statement-model/",
+    "data/results/dev_runs/20260812_1738_nvidia-llama-3-3-nemotron-super-49b-v1_statement-model-v1/"
+   ]
+  },
+  "model": {
+   "name": "nvidia/llama-3.3-nemotron-super-49b-v1",
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "temperature": 0,
+   "max_tokens": 128
+  },
+  "prompt_framing": {
+   "answer": {
+    "system": "detailed thinking off",
+    "preamble": "You are a factual question-answering assistant. Answer questions concisely and accurately. Answer with the fact only - no explanation, no restatement of the question.\n\n"
+   },
+   "condense": {
+    "system": "detailed thinking off",
+    "preamble": "You are a factual question-answering assistant. Answer questions concisely and accurately.\n\n"
+   }
+  },
+  "prompt_fragments": {
+   "ABSTAIN_SENTINEL": "The answer is not in the context.",
+   "ABSTAIN_CLAUSE": "Refuse if you don't find the answer and reply exactly: \"The answer is not in the context.\"",
+   "ANSWER_INSTRUCTION": "Use the following information to answer the question as concisely as possible.",
+   "ANSWER_INSTRUCTION_NO_CONTEXT": "Answer the following question as concisely as possible."
+  },
+  "prompt_templates": {
+   "C1_base_llm": "Answer the following question as concisely as possible.\nRefuse if you don't find the answer and reply exactly: \"The answer is not in the context.\"\n\nQuestion: {question}\nAnswer:",
+   "C2_rag": "Use the following information to answer the question as concisely as possible.\nRefuse if you don't find the answer and reply exactly: \"The answer is not in the context.\"\n\nContext:\n{context}\n\nQuestion: {question}\nAnswer:",
+   "C3_graph_rag": "Use the following information to answer the question as concisely as possible.\nRefuse if you don't find the answer and reply exactly: \"The answer is not in the context.\"\n\nContext:\n{context}\n\nQuestion: {question}\nAnswer:",
+   "C4_answer": "Use the following information to answer the question as concisely as possible.\nRefuse if you don't find the answer and reply exactly: \"The answer is not in the context.\"\n\nContext:\n{context}\n\nQuestion: {question}\nAnswer:",
+   "C4_condense": "Given the following Wikidata facts and the question, select only the relevant facts and summarise them in one or two sentences.\n\nFacts:\n{top_k_triples}\n\nQuestion: {question}\nSummary:"
+  },
+  "retrieval": {
+   "top_k": {
+    "C2": 30,
+    "C3": 30,
+    "C4": 30
+   },
+   "embedding_model": "multi-qa-MiniLM-L6-cos-v1",
+   "noise_filter_mode": "property_type",
+   "reverse_limit": 200,
+   "reverse_per_prop_cap": 30
+  }
+ },
+ "completion": {
+  "raw_sha256": "e026b14155ec6b416de743a64399a46de0519985e5e34946480d699868263a5f"
+ },
+ "provenance_corrections": [
+  {
+   "corrected_at": "2026-08-17T18:19:52",
+   "field": "completion.raw_sha256",
+   "old_value": null,
+   "new_value": "e026b14155ec6b416de743a64399a46de0519985e5e34946480d699868263a5f",
+   "reason": "Backfilled 2026-08-17: this run predates raw-file hash recording (added to document_run on 2026-08-14), so no hash was recorded at run time. The value is the sha256 of the raw file as stored in git at backfill time, added so the file is tamper-evident from now on; it does NOT certify the file was unmodified between run time and backfill (git history is the evidence for that).",
+   "evidence": "sha256 of 20260812_1738_statement-model-v1_raw.json computed 2026-08-17; file tracked in git since the run"
+  }
+ ]
+}

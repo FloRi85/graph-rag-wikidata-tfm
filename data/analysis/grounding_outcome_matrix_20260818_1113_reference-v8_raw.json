@@ -1,0 +1,163 @@
+{
+ "metric": "2x2 outcome (correct/hallucination) x grounding (faithfulness >= threshold) per retrieval config, plus type-plausibility of hallucinations",
+ "pre_registered": "docs/reference_run_plan.md, execution log 2026-08-19",
+ "grounded_threshold": 0.5,
+ "run": {
+  "file": "20260818_1113_reference-v8_raw.json",
+  "sha256": "7c55fea5013aa77aa24fec794fbc610b6752c492344205510622431d699a6216"
+ },
+ "faithfulness": {
+  "file": "faithfulness_20260818_1113_reference-v8_raw.json",
+  "sha256": "d7cfac36d076fd6c1bd1969db001a94654e99fba4dc44c6fe170c68ac5b7357d"
+ },
+ "configs": {
+  "rag": {
+   "cells": {
+    "correct": {
+     "grounded": 87,
+     "ungrounded": 18
+    },
+    "hallucination": {
+     "grounded": 7,
+     "ungrounded": 4
+    }
+   },
+   "unscored": 3,
+   "excluded_by_run": 0,
+   "confab_ids": [
+    "4738e109",
+    "659b8717",
+    "b635c0b2",
+    "f2cdd263"
+   ],
+   "n_scored_attempted": 116,
+   "n_scored_hallucinations": 11,
+   "confabulation_rate": 0.36363636363636365,
+   "cell_shares": {
+    "correct_grounded": 0.75,
+    "correct_ungrounded": 0.15517241379310345,
+    "hallucination_grounded": 0.0603448275862069,
+    "hallucination_ungrounded": 0.034482758620689655
+   }
+  },
+  "graph_rag": {
+   "cells": {
+    "correct": {
+     "grounded": 55,
+     "ungrounded": 32
+    },
+    "hallucination": {
+     "grounded": 4,
+     "ungrounded": 6
+    }
+   },
+   "unscored": 1,
+   "excluded_by_run": 0,
+   "confab_ids": [
+    "20912615",
+    "375fbf08",
+    "3f0bc8bf",
+    "4738e109",
+    "88ccdd18",
+    "c3fb76c8"
+   ],
+   "n_scored_attempted": 97,
+   "n_scored_hallucinations": 10,
+   "confabulation_rate": 0.6,
+   "cell_shares": {
+    "correct_grounded": 0.5670103092783505,
+    "correct_ungrounded": 0.32989690721649484,
+    "hallucination_grounded": 0.041237113402061855,
+    "hallucination_ungrounded": 0.061855670103092786
+   }
+  },
+  "rerank": {
+   "cells": {
+    "correct": {
+     "grounded": 75,
+     "ungrounded": 9
+    },
+    "hallucination": {
+     "grounded": 10,
+     "ungrounded": 5
+    }
+   },
+   "unscored": 0,
+   "excluded_by_run": 0,
+   "confab_ids": [
+    "3f0bc8bf",
+    "4738e109",
+    "484d8403",
+    "5da628e9",
+    "c74ce6e8"
+   ],
+   "n_scored_attempted": 99,
+   "n_scored_hallucinations": 15,
+   "confabulation_rate": 0.3333333333333333,
+   "cell_shares": {
+    "correct_grounded": 0.7575757575757576,
+    "correct_ungrounded": 0.09090909090909091,
+    "hallucination_grounded": 0.10101010101010101,
+    "hallucination_ungrounded": 0.050505050505050504
+   }
+  }
+ },
+ "type_plausibility": {
+  "rag": {
+   "numerical": {
+    "plausible": 3,
+    "total": 3
+   },
+   "date": {
+    "plausible": 0,
+    "total": 0
+   },
+   "boolean": {
+    "plausible": 1,
+    "total": 1
+   }
+  },
+  "graph_rag": {
+   "numerical": {
+    "plausible": 2,
+    "total": 2
+   },
+   "date": {
+    "plausible": 0,
+    "total": 0
+   },
+   "boolean": {
+    "plausible": 2,
+    "total": 3
+   }
+  },
+  "rerank": {
+   "numerical": {
+    "plausible": 6,
+    "total": 6
+   },
+   "date": {
+    "plausible": 1,
+    "total": 1
+   },
+   "boolean": {
+    "plausible": 1,
+    "total": 1
+   }
+  },
+  "base_llm_abstain": {
+   "numerical": {
+    "plausible": 8,
+    "total": 8
+   },
+   "date": {
+    "plausible": 4,
+    "total": 5
+   },
+   "boolean": {
+    "plausible": 0,
+    "total": 0
+   }
+  }
+ }
+}

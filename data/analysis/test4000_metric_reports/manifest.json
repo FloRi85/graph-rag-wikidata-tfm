@@ -1,0 +1,63 @@
+{
+ "generated_at": "2026-09-12T05:34:45+00:00",
+ "command": "tools/build_metric_reports.py",
+ "python": "3.11.9",
+ "schema": "test4000_metric_reports/v1",
+ "inputs": {
+  "raw": {
+   "path": "data/results/test_runs/20260819_2017_nvidia-llama-3-3-nemotron-super-49b-v1_mintaka_test_raw/20260819_2017_mintaka_test_raw_raw.json",
+   "sha256": "01b8b82c81c410aedc61aa4f3f58d4a762822007fcdec240c5ecd5a23328f627"
+  },
+  "gold": {
+   "path": "data/questions/mintaka_test_raw.json",
+   "sha256": "2784aa9a047d86d23bb78645dad79c971478486f9520489915cd0a2d22ae547f"
+  },
+  "faithfulness": {
+   "path": "data/analysis/faithfulness_20260819_2017_mintaka_test_raw_raw.json",
+   "sha256": "bcd49dbd2bbd75b824da688d2b6129343f838b19cc99880cde17e6312935139a"
+  }
+ },
+ "code_sha256": {
+  "tools/build_metric_reports.py": "48a220dc3d45e00361141b9c55be2365a649ece51715a98948edd0b050509d27",
+  "src/eval/metrics.py": "f7cf596779528045acb08d900cd276882441cbf6626faf3b6894392ab44e06c9",
+  "src/eval/stats.py": "92b75616e2c98b85d72be6cc21771dad735a65ec914fe5355b683fd0ce5160ca",
+  "src/eval/gold_source.py": "762ff045e7b335b2c0f82f670abb70d2b104be0ca25dccf9fbb9c008a6ae7182",
+  "src/eval/parse_answers.py": "2931d2f3c1d4790de5820cbf6ae507e3f5059fe4c4f30a9b290bedebbaa85f13",
+  "src/eval/parse_questions.py": "979eef29f4adfff373765bbee61e614be088a9e9088b116187364392816139f9",
+  "tools/document_run.py": "8ae067ce2c5e9e4dc5a3ee00a795bca6c42b1b068c0866134ec38b4856f195f9"
+ },
+ "settings": {
+  "threshold": 0.5,
+  "seed": 0,
+  "n_resamples": 10000,
+  "tiny_n": 50,
+  "grounded_threshold": 0.5,
+  "sensitivity_thresholds": [
+   0.3,
+   0.5,
+   0.7
+  ],
+  "attempted_definition": "metrics.is_attempted: outcome in {correct, hallucination}; Other excluded",
+  "scoreable_definition": "attempted AND stored judge `score` is not null; partial_score never used",
+  "pct_rule": "count-based percentages: tools/document_run._pct1 = round(count / n * 100, 1) (divide first); F1 printed as mean*100 with one decimal; faithfulness means with three decimals",
+  "p_value_kind": "two-sided percentile-bootstrap tail estimate, resolution 2/n_resamples, printed as <.001 below resolution; mcnemar = exact binomial on discordant pairs; CIs nominal pointwise 95%, unadjusted",
+  "delta_orientation": "A minus B in the pair key A-B"
+ },
+ "outputs_sha256": {
+  "results.json": "e9ca48adce37247407ec8bdf66e7f04a4ac7755a259212a9e2427ba4296c46c2",
+  "README.md": "9a6bbee5542680019a5556b868c3cc00ee1dd306918b4d82f0ed277aa52bb176",
+  "full_4000/hallucination_abstention.md": "a6578bc65f6cbdec3995ddb8982cada737c4ec942117f7af52e5944066de0c6f",
+  "full_4000/f1_correctness.md": "735f339af892c0c2b35e065fd7560e6bed9ea73df9f2d6a3afc1ae531510b679",
+  "full_4000/faithfulness.md": "95157f17a51bb44267c7f956b6f32a55812b24c963f4bb935d3db4bf73ce3506",
+  "attempted/hallucination_abstention.md": "1bebb629ad2d29d4e2f660c556019e28618f1bc0d72370501709dd3ec218aff9",
+  "attempted/f1_correctness.md": "dba8327df2b17e73e7d11c2bf8698e7d28f1de0473f627c25f5c9583126d6caa",
+  "attempted/faithfulness.md": "74f07f0dcdac7e2bdecdaae3c1a343c482c544d185dadfd9d3307964b5738bf6",
+  "explorer.html": "2e13891b1266c2c74e5f2f0515f504899b44043c245adbed60d71d3541513203"
+ },
+ "precedent_checks": {
+  "matched": 77,
+  "mismatched": 0,
+  "not_applicable": 0
+ },
+ "note": "The only volatile file. results.json, the reports and explorer.html are byte-identical across regenerations with the same inputs and code."
+}

@@ -1,0 +1,20 @@
+.env
+.env.*
+venv/
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+models/
+
+# Runtime outputs are separate from the versioned research inputs.
+data/cache/demo/
+data/analysis/demo_calls.jsonl
+output/
+tmp/
+
+# The sealed answer file is restored from the checksummed Release asset.
+data/results/test_runs/**/*_raw.json
+
+# Thesis and authoring material are submitted separately.
+docs/thesis/

@@ -1,0 +1,1175 @@
+{
+  "faithfulness_sha256": "d7cfac36d076fd6c1bd1969db001a94654e99fba4dc44c6fe170c68ac5b7357d",
+  "cases": [
+    {
+      "id": "0faaf820",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "How many books are in the original Harry Potter series?",
+      "answer": "7",
+      "claims": [
+        {
+          "text": "The original Harry Potter series consists of 7 books.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "3491342d",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "How many children did Cersei and her brother have in the Game of Thrones series?",
+      "answer": "3",
+      "claims": [
+        {
+          "text": "Cersei and her brother (implied to be Jaime Lannister, though not stated in the question or answer, this is a necessary contextual assumption for the claim to make sense) had children together in the Game of Thrones series.",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "The number of children Cersei and her brother had in the Game of Thrones series is 3.",
+          "supported": "no",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Cersei Lannister and her brother, Jaime Lannister, had children together in the Game",
+          "supported": "no",
+          "claim_valid": "no"
+        }
+      ],
+      "decomposition_complete": "no",
+      "notes": ""
+    },
+    {
+      "id": "392200c5",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "Which NHL team has won the most Stanley Cups?",
+      "answer": "Montreal Canadiens",
+      "claims": [
+        {
+          "text": "The Montreal Canadiens are an NHL team.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The Montreal Canadiens have won the most Stanley Cups among all NHL teams.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "4ef7d86c",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "Which MLB team plays in Colorado?",
+      "answer": "Colorado Rockies",
+      "claims": [
+        {
+          "text": "The MLB team that plays in Colorado is the Colorado Rockies.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": "supported borderline: context entails Rockies are an MLB team (2025 season, competition class MLB) but nothing states they play in Colorado; only evidence is the team name -> strict bar = no"
+    },
+    {
+      "id": "6d4dced4",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "Is Johnny Depp or Brad Pitt older?",
+      "answer": "Johnny Depp",
+      "claims": [
+        {
+          "text": "The answer provided to the question \"Is Johnny Depp or Brad Pitt older?\" is \"Johnny Depp\".",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "[INFERRED, NOT DIRECTLY STATED] Johnny Depp is older than Brad Pitt.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "[EXAMPLE OF WHAT A FULL CLAIM COULD BE, NOT DIRECTLY DERIVED FROM YOUR ANSWER]",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "Johnny Depp (born June 9, 1963) is older than Brad Pitt (born December 18, 1963).",
+          "supported": "yes",
+          "claim_valid": "no"
+        },
+        {
+          "text": "The answer provided to the question \"Is Johnny Depp or Brad Pitt older?\" is \"Johnny Depp\".",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The answer provided to the question \"Is Johnny Depp or Brad Pitt older?\" is \"Johnny Depp\".",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": "birth dates not in question or answer"
+    },
+    {
+      "id": "7b9b21f6",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "Did the last Harry Potter book come before the year 2010?",
+      "answer": "Yes",
+      "claims": [
+        {
+          "text": "The last Harry Potter book was published before the year 2010.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": "supported via description span 1997-2007 -> series ended 2007 < 2010"
+    },
+    {
+      "id": "cec6cef6",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "Is Kamala Harris of Asian descent?",
+      "answer": "Yes",
+      "claims": [
+        {
+          "text": "Kamala Harris is of Asian descent.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "df1d3930",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "Who was the last United States president to be assassinated while in office?",
+      "answer": "John F. Kennedy",
+      "claims": [
+        {
+          "text": "John F. Kennedy was a President of the United States.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "John F. Kennedy was assassinated.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "John F. Kennedy's assassination occurred while he was in office as President of the United States.",
+          "supported": "no",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "No United States President after John F. Kennedy has been assassinated while in office.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": "c3/c4 supported=no: assassination not dated/tied to term in context, and later-president absence-of-event is not entailment; claim_valid=yes per presupposition rule (last + while in office unpack the question frame)"
+    },
+    {
+      "id": "2652ec2b",
+      "config": "rag",
+      "outcome": "correct",
+      "question": "Which award did the first puzzle game by Fireproof Games win at the British Academy Video Games Awards?",
+      "answer": "Best British Game",
+      "claims": [
+        {
+          "text": "The first puzzle game by Fireproof Games won an award at the British Academy Video Games Awards.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The award won by the first puzzle game by Fireproof Games at the British Academy Video Games Awards was the \"Best British Game\" award.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "375fbf08",
+      "config": "rag",
+      "outcome": "correct",
+      "question": "How many playable characters are there in Final Fantasy 7?",
+      "answer": "9",
+      "claims": [
+        {
+          "text": "There are 9 playable characters in Final Fantasy 7.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "6d4dced4",
+      "config": "rag",
+      "outcome": "hallucination",
+      "question": "Is Johnny Depp or Brad Pitt older?",
+      "answer": "Brad Pitt (born December 18, 1963) is older than Johnny Depp (born June 9, 1963).",
+      "claims": [
+        {
+          "text": "Brad Pitt was born on December 18, 1963.",
+          "supported": "no",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Johnny Depp was born on June 9, 1963.",
+          "supported": "no",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Brad Pitt is older than Johnny Depp.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "6e13af7b",
+      "config": "rag",
+      "outcome": "correct",
+      "question": "Which was the last manned space mission to go to the moon?",
+      "answer": "Apollo 17 (1972)",
+      "claims": [
+        {
+          "text": "The last manned space mission to go to the moon was Apollo 17.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Apollo 17 occurred in 1972.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "73a3d800",
+      "config": "rag",
+      "outcome": "correct",
+      "question": "Which cofounding members were no longer part of the Destiny's Child lineup after 2000?",
+      "answer": "LaTavia Roberson and LeToya Luckett.",
+      "claims": [
+        {
+          "text": "LaTavia Roberson was a cofounding member of Destiny's Child.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "LaTavia Roberson was no longer part of the Destiny's Child lineup after 2000.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "LeToya Luckett was a cofounding member of Destiny's Child.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "LeToya Luckett was no longer part of the Destiny's Child lineup after 2000.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "a473cdde",
+      "config": "rag",
+      "outcome": "correct",
+      "question": "Which movie had a bigger budget, Gladiator or Troy?",
+      "answer": "Troy",
+      "claims": [
+        {
+          "text": "The movie \"Troy\" had a bigger budget than the movie \"Gladiator\".",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "aca90aa1",
+      "config": "rag",
+      "outcome": "correct",
+      "question": "Which Confederate general did not survive after taking part in the Battle of Chancellorsville?",
+      "answer": "Stonewall Jackson",
+      "claims": [
+        {
+          "text": "The Battle of Chancellorsville took place.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Stonewall Jackson was a Confederate general.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Stonewall Jackson took part in the Battle of Chancellorsville.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Stonewall Jackson did not survive after taking part in the Battle of Chancellorsville.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "b709aab6",
+      "config": "rag",
+      "outcome": "hallucination",
+      "question": "Which movie was produced by Steven Spielberg and came out in 1991?",
+      "answer": "Hook",
+      "claims": [
+        {
+          "text": "The movie \"Hook\" was produced by Steven Spielberg.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The movie \"Hook\" was released in 1991.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "c01e3684",
+      "config": "rag",
+      "outcome": "correct",
+      "question": "Who was the 18th president of the United States?",
+      "answer": "Ulysses S. Grant",
+      "claims": [
+        {
+          "text": "Ulysses S. Grant was the 18th president of the United States.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "18650b9b",
+      "config": "rerank",
+      "outcome": "correct",
+      "question": "How many black presidents has the U.S. had?",
+      "answer": "1",
+      "claims": [
+        {
+          "text": "The United States has had exactly 1 black president.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "4738e109",
+      "config": "rerank",
+      "outcome": "hallucination",
+      "question": "How many Teams has Deshaun Watson played for?",
+      "answer": "2",
+      "claims": [
+        {
+          "text": "[INSERT ACTUAL ANSWER HERE, THEN BREAK DOWN]",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "Answer Provided in Question: \"2\"",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Implicit Context: The question implies a specific timeframe (often up to the point of the question's asking, unless specified otherwise), but since none is given, we'll assume \"up to the point of knowledge cutoff\" (for this example, let's say up to 2023).",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "Deshaun Watson has played for 2 NFL teams up to 2023.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "No answer was provided to break down into atomic factual claims.",
+          "supported": "no",
+          "claim_valid": "no"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "484d8403",
+      "config": "rerank",
+      "outcome": "hallucination",
+      "question": "Who was named after Gaius Julius Caesar and the son of the popular Roman general Germanicus?",
+      "answer": "Gaius Julius Caesar Germanicus Major",
+      "claims": [
+        {
+          "text": "The individual in question was named after Gaius Julius Caesar.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The individual in question was named after the son of the popular Roman general Germanicus, implying the individual's name includes a reference to Germanicus.",
+          "supported": "no",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The individual's full name is Gaius Julius Caesar Germanicus.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Germanicus was a popular Roman general.",
+          "supported": "no",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Germanicus had a son.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The individual in question is that son of Germanicus.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Directly Checkable Claims (with external historical knowledge):",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "Germanicus was a popular Roman general.",
+          "supported": "no",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Gaius Julius Caesar Germanicus is the full name of the individual in question.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Claims Requiring Additional Context for Checking (but stated as per the answer):",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "The individual was named after Gaius Julius Caesar. (Implies a naming inspiration, checkable with biographical info on Gaius Julius Caesar Germanicus)",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The individual was named after (the son aspect implies lineage, thus):",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "Corrected for Clarity (since the original might be misleading):",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "The individual is the son of Germanicus. (Direct and checkable with historical records)",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Removed for Accuracy:",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "\"The individual in question was named after the son of...\" (Misleading, as it suggests naming after a son, not being the son)",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "Added for Accuracy Based on Correction:",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "Germanicus had a son, who is Gaius Julius Caesar Germanicus. (Combines two implied claims for clarity and checkability)",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "5da628e9",
+      "config": "rerank",
+      "outcome": "hallucination",
+      "question": "How many Republican governors has Virginia had since the year 2000?",
+      "answer": "0",
+      "claims": [
+        {
+          "text": "Since the year 2000, Virginia has had 0 Republican governors.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": "flipped to no: context explicitly says affiliation cannot be determined from the facts"
+    },
+    {
+      "id": "7b9b21f6",
+      "config": "rerank",
+      "outcome": "correct",
+      "question": "Did the last Harry Potter book come before the year 2010?",
+      "answer": "Yes",
+      "claims": [
+        {
+          "text": "The last Harry Potter book was published before the year 2010.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "9bcdff9d",
+      "config": "rerank",
+      "outcome": "correct",
+      "question": "What is the largest city in the U.S. by population?",
+      "answer": "New York City",
+      "claims": [
+        {
+          "text": "New York City is the largest city in the U.S. by population.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "c2f85f87",
+      "config": "rerank",
+      "outcome": "correct",
+      "question": "Did Breakout (Richard Stark) come out after the 1900s?",
+      "answer": "Yes",
+      "claims": [
+        {
+          "text": "The answer to whether Breakout (Richard Stark) came out after the 1900s is \"Yes\".",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The answer to whether Breakout (Richard Stark) came out after the 1900s is \"Yes\".",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "[INFERRED, NOT PART OF ORIGINAL CLAIMS]",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "Breakout (by Richard Stark) has a publication date.",
+          "supported": "yes",
+          "claim_valid": "no"
+        },
+        {
+          "text": "The publication date of Breakout (by Richard Stark) is after the year 1900.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "f19eff0e",
+      "config": "rerank",
+      "outcome": "correct",
+      "question": "Who was the main villain played by Josh Brolin in the second Deadpool movie?",
+      "answer": "Cable",
+      "claims": [
+        {
+          "text": "The main villain in the second Deadpool movie was played by Josh Brolin.",
+          "supported": "no",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The character played by Josh Brolin in this context is Cable.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The second Deadpool movie refers to \"Deadpool 2\" (2018).",
+          "supported": "yes",
+          "claim_valid": "no"
+        },
+        {
+          "text": "Cable is considered the main antagonist in \"Deadpool 2\".",
+          "supported": "no",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Do Not Use for Verifiable Claims Without External Confirmation",
+          "supported": "no",
+          "claim_valid": "no"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": "claims 1+4 flipped to no: context never states villain/antagonist, only that Brolin performed Cable"
+    },
+    {
+      "id": "18650b9b",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "How many black presidents has the U.S. had?",
+      "answer": "1",
+      "claims": [
+        {
+          "text": "The United States has had exactly one black president.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "51f557cf",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "What was Nirvana's last studio album called?",
+      "answer": "In Utero",
+      "claims": [
+        {
+          "text": "Nirvana's last studio album was called \"In Utero\".",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "6e13af7b",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "Which was the last manned space mission to go to the moon?",
+      "answer": "Apollo 17",
+      "claims": [
+        {
+          "text": "The last manned space mission to go to the moon was Apollo 17.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "7b3cc187",
+      "config": "graph_rag",
+      "outcome": "hallucination",
+      "question": "What Quentin Tarantino movie was nominated for best director but didn't win?",
+      "answer": "Inglourious Basterds",
+      "claims": [
+        {
+          "text": "The movie \"Inglourious Basterds\" is a Quentin Tarantino movie.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "\"Inglourious Basterds\" was nominated for Best Director.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Despite the nomination, \"Inglourious Basterds\" did not win the Best Director award.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "817374ba",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "Who was a relative of the second president who also became a president?",
+      "answer": "John Quincy Adams",
+      "claims": [
+        {
+          "text": "John Quincy Adams was a relative of the second president of the United States.",
+          "supported": "no",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The second president of the United States was John Adams (implied for clarity, though not directly stated in the answer but necessary for the claim to stand alone and be checkable; note: this addition is technically against the \"do not add\" rule, so I'll provide two versions for compliance)",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "John Quincy Adams was a relative of the second president of the United States.",
+          "supported": "no",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "John Quincy Adams became a president of the United States.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "John Quincy Adams was a relative of John Adams, the second president of the United States.",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "John Quincy Adams became a president of the United States.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "c6d11e32",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "Is Portland the capital of the USA?",
+      "answer": "No",
+      "claims": [
+        {
+          "text": "The capital of the USA is not Portland.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "cee37d95",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "What year did Last of Us 2 come out?",
+      "answer": "2020",
+      "claims": [
+        {
+          "text": "The game \"Last of Us 2\" was released in the year 2020.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "f005d819",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "Who plays in New York and used to have Derek Jeter?",
+      "answer": "New York Yankees",
+      "claims": [
+        {
+          "text": "The team that plays in New York is the New York Yankees.",
+          "supported": "no",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The New York Yankees used to have Derek Jeter.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": "claim 1 flipped to no: only evidence Yankees play in New York is the team name (Rockies rule)"
+    },
+    {
+      "id": "f19eff0e",
+      "config": "graph_rag",
+      "outcome": "correct",
+      "question": "Who was the main villain played by Josh Brolin in the second Deadpool movie?",
+      "answer": "Cable",
+      "claims": [
+        {
+          "text": "The main villain in the second Deadpool movie was played by Josh Brolin.",
+          "supported": "no",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The character played by Josh Brolin in the second Deadpool movie is Cable.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": "claim 1 flipped to no: context never states villain, only performer fact"
+    },
+    {
+      "id": "18650b9b",
+      "config": "rag",
+      "outcome": "correct",
+      "question": "How many black presidents has the U.S. had?",
+      "answer": "1",
+      "claims": [
+        {
+          "text": "The United States has had 1 black president.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "1fa96507",
+      "config": "rag",
+      "outcome": "correct",
+      "question": "Who has won more Champions League titles, Messi or Cristiano Ronaldo?",
+      "answer": "Cristiano Ronaldo",
+      "claims": [
+        {
+          "text": "Cristiano Ronaldo has won more Champions League titles than Lionel Messi.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": "d corrected to yes (slip); single claim covers the answer"
+    },
+    {
+      "id": "8ce82235",
+      "config": "rag",
+      "outcome": "correct",
+      "question": "What actor played James Bond and was born in Chester, United Kingdom?",
+      "answer": "Daniel Craig",
+      "claims": [
+        {
+          "text": "Daniel Craig played James Bond.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Daniel Craig was born in Chester, United Kingdom.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "9b8492c9",
+      "config": "rag",
+      "outcome": "correct",
+      "question": "Who wrote the Hunger Games books?",
+      "answer": "Suzanne Collins",
+      "claims": [
+        {
+          "text": "Suzanne Collins wrote the Hunger Games books.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "ad493624",
+      "config": "rag",
+      "outcome": "correct",
+      "question": "Did Minecraft come out before 2005?",
+      "answer": "No",
+      "claims": [
+        {
+          "text": "Minecraft was released after 2005.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "ef9fce27",
+      "config": "rag",
+      "outcome": "correct",
+      "question": "Who was the 43rd president of the United States and former governor of Texas?",
+      "answer": "George W. Bush",
+      "claims": [
+        {
+          "text": "George W. Bush was the 43rd President of the United States.",
+          "supported": "no",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "George W. Bush was a former Governor of Texas.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "f19eff0e",
+      "config": "rag",
+      "outcome": "correct",
+      "question": "Who was the main villain played by Josh Brolin in the second Deadpool movie?",
+      "answer": "Cable",
+      "claims": [
+        {
+          "text": "The main villain in the second Deadpool movie was played by Josh Brolin.",
+          "supported": "no",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The character played by Josh Brolin in the second Deadpool movie is Cable.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "f2cdd263",
+      "config": "rag",
+      "outcome": "hallucination",
+      "question": "Who has won the most Grammy Awards of all time?",
+      "answer": "Beyoncé",
+      "claims": [
+        {
+          "text": "Beyoncé has won the most Grammy Awards of all time.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "18dfddd1",
+      "config": "rerank",
+      "outcome": "correct",
+      "question": "Who was the quarterback of the winning team in Super Bowl 53?",
+      "answer": "Tom Brady",
+      "claims": [
+        {
+          "text": "Tom Brady was the quarterback of the winning team in Super Bowl 53.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "19c7c396",
+      "config": "rerank",
+      "outcome": "correct",
+      "question": "Who was MLB Commissioner during World Series of 1984?",
+      "answer": "Peter Ueberroth",
+      "claims": [
+        {
+          "text": "Peter Ueberroth was the MLB Commissioner during the World Series of 1984.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "2e8a5f0c",
+      "config": "rerank",
+      "outcome": "correct",
+      "question": "Who wrote the Jack Ryan series?",
+      "answer": "Tom Clancy",
+      "claims": [
+        {
+          "text": "Tom Clancy wrote the Jack Ryan series.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "3f0bc8bf",
+      "config": "rerank",
+      "outcome": "hallucination",
+      "question": "Who discovered America first, Amerigo Vespucci or Christopher Columbus?",
+      "answer": "Christopher Columbus",
+      "claims": [
+        {
+          "text": "Christopher Columbus discovered America first.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "To fully address the question with additional verifiable claims (without altering the original answer's content), one might typically include:",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "Amerigo Vespucci did not discover America before Christopher Columbus. (Not Included as per rules, since it's an inference based on the question, not the answer)",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The discovery in question refers to the European discovery of the Americas. (Not Included, assumes background knowledge)",
+          "supported": "yes",
+          "claim_valid": "no"
+        },
+        {
+          "text": "Christopher Columbus's first voyage to America occurred in 1492. (Not Included, not mentioned in the answer)",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "Amerigo Vespucci's voyages took place after Columbus's first voyage. (Not Included, not mentioned in the answer)",
+          "supported": "no",
+          "claim_valid": "no"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": "claim 4 claim_valid to no: 'European discovery' framing is an interpretive addition (Jaime rule)"
+    },
+    {
+      "id": "7ebb7659",
+      "config": "rerank",
+      "outcome": "correct",
+      "question": "Who is older, Samuel L Jackson or Hayden Christensen?",
+      "answer": "Samuel L Jackson",
+      "claims": [
+        {
+          "text": "Samuel L Jackson is older than Hayden Christensen.",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "a3f67889",
+      "config": "rerank",
+      "outcome": "correct",
+      "question": "Is Tabitha King older than George R. Martin?",
+      "answer": "No",
+      "claims": [
+        {
+          "text": "The answer to whether Tabitha King is older than George R. Martin is \"No\".",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Hypothetical Claim 1: The answer to whether Tabitha King is older than George R. Martin is \"No\".",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Hypothetical Claim 2: George R. Martin was born on August 20, 1948. (Not actually stated in the provided answer)",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "Hypothetical Claim 3: Tabitha King was born on March 1, 1947. (Not actually stated in the provided answer)",
+          "supported": "no",
+          "claim_valid": "no"
+        },
+        {
+          "text": "Hypothetical Claim 4: Based on their birthdates, George R. Martin is not older than Tab",
+          "supported": "no",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": "claim 5 flipped to no: decomposer inverted direction; context says Martin (1930) IS older than Tabitha (1949)"
+    },
+    {
+      "id": "ad493624",
+      "config": "rerank",
+      "outcome": "correct",
+      "question": "Did Minecraft come out before 2005?",
+      "answer": "No",
+      "claims": [
+        {
+          "text": "Minecraft was released after 2005.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    },
+    {
+      "id": "b750ba0d",
+      "config": "rerank",
+      "outcome": "correct",
+      "question": "Which author of a popular vampire series also wrote the novel that the movie The Host was based on?",
+      "answer": "Stephenie Meyer",
+      "claims": [
+        {
+          "text": "Stephenie Meyer is the author of a popular vampire series.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "Stephenie Meyer wrote the novel \"The Host\".",
+          "supported": "yes",
+          "claim_valid": "yes"
+        },
+        {
+          "text": "The movie \"The Host\" was based on the novel \"The Host\" written by Stephenie Meyer.",
+          "supported": "yes",
+          "claim_valid": "yes"
+        }
+      ],
+      "decomposition_complete": "yes",
+      "notes": ""
+    }
+  ]
+}

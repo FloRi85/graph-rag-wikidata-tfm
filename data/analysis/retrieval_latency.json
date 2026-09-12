@@ -1,0 +1,100 @@
+{
+  "latest": {
+    "timestamp": "2026-08-23 23:32:58Z",
+    "questions_file": "mintaka_sample_dev_200.json",
+    "n_questions": 40,
+    "repeats": 1,
+    "top_k": {
+      "C2": 30,
+      "C3/C4": 30
+    },
+    "arms": {
+      "C3/C4 Graph-RAG": {
+        "n": 40,
+        "skipped": 0,
+        "pool_ms": 8.447650005109608,
+        "rank_ms": 611.5957499714568,
+        "format_ms": 0.032249983632937074,
+        "total_ms": 619.700199982617,
+        "total_mean_ms": 809.868875000393,
+        "pool_size_median": 234.5
+      },
+      "C2 RAG": {
+        "n": 40,
+        "skipped": 0,
+        "pool_ms": 1.528549997601658,
+        "rank_ms": 1987.2534000023734,
+        "format_ms": 0.0,
+        "total_ms": 1988.1035500147846,
+        "total_mean_ms": 2253.06951499806,
+        "pool_size_median": 41.0
+      }
+    }
+  },
+  "history": [
+    {
+      "timestamp": "2026-08-23 23:25:24Z",
+      "questions_file": "mintaka_sample_dev_200.json",
+      "n_questions": 40,
+      "repeats": 1,
+      "top_k": {
+        "C2": 30,
+        "C3/C4": 30
+      },
+      "arms": {
+        "C3/C4 Graph-RAG": {
+          "n": 40,
+          "skipped": 0,
+          "pool_ms": 8.496850030496716,
+          "rank_ms": 667.8864500136115,
+          "format_ms": 0.03365002339705825,
+          "total_ms": 675.2297500206623,
+          "total_mean_ms": 901.1081350021414,
+          "pool_size_median": 234.5
+        },
+        "C2 RAG": {
+          "n": 40,
+          "skipped": 0,
+          "pool_ms": 1.403400005074218,
+          "rank_ms": 2110.3239499789197,
+          "format_ms": 0.0,
+          "total_ms": 2111.218399979407,
+          "total_mean_ms": 2307.286524999654,
+          "pool_size_median": 41.0
+        }
+      }
+    },
+    {
+      "timestamp": "2026-08-23 23:16:06Z",
+      "questions_file": "mintaka_sample_dev_200.json",
+      "n_questions": 40,
+      "repeats": 1,
+      "top_k": {
+        "C2": 30,
+        "C3/C4": 30
+      },
+      "arms": {
+        "C3/C4 Graph-RAG": {
+          "n": 40,
+          "skipped": 0,
+          "pool_ms": 9.6528000140097,
+          "rank_ms": 711.869349994231,
+          "format_ms": 0.036500015994533896,
+          "total_ms": 723.4750500065275,
+          "total_mean_ms": 1058.7058674936998,
+          "pool_size_median": 234.5
+        },
+        "C2 RAG": {
+          "n": 40,
+          "skipped": 0,
+          "pool_ms": 1.4640500012319535,
+          "rank_ms": 2050.0082499929704,
+          "format_ms": 0.0,
+          "total_ms": 2051.227949996246,
+          "total_mean_ms": 2268.6229850005475,
+          "pool_size_median": 41.0
+        }
+      }
+    }
+  ]
+}

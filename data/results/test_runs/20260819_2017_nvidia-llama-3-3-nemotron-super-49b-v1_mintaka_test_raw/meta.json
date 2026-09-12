@@ -1,0 +1,5054 @@
+{
+ "meta_schema_version": 1,
+ "run_id": "20260819_2017",
+ "slug": "mintaka_test_raw",
+ "purpose": "TEST-4000: the sealed run, frozen configuration per CLAUDE.md Current State (k=30, global allocation, entity block all, variant F, condenser cap 384, statement cache v8, article cache v1)",
+ "status": "complete",
+ "started_at": "20260819_201706",
+ "sample": {
+  "file": "data/questions/mintaka_test_raw.json",
+  "n": 4000,
+  "sha256": "2784aa9a047d86d23bb78645dad79c971478486f9520489915cd0a2d22ae547f"
+ },
+ "start_settings": {
+  "workers": 2,
+  "rpm": 33
+ },
+ "preflight": {
+  "n_entities": 2530,
+  "truncated": {
+   "Q100": [
+    "reverse"
+   ],
+   "Q1010203": [
+    "reverse"
+   ],
+   "Q1011509": [
+    "reverse"
+   ],
+   "Q1011547": [
+    "reverse"
+   ],
+   "Q10132": [
+    "reverse"
+   ],
+   "Q102427": [
+    "reverse"
+   ],
+   "Q102438": [
+    "reverse"
+   ],
+   "Q102513": [
+    "reverse"
+   ],
+   "Q1026417": [
+    "reverse"
+   ],
+   "Q102711": [
+    "reverse"
+   ],
+   "Q1027165": [
+    "reverse"
+   ],
+   "Q1027891": [
+    "reverse"
+   ],
+   "Q1027904": [
+    "reverse"
+   ],
+   "Q10285": [
+    "reverse"
+   ],
+   "Q1033": [
+    "reverse"
+   ],
+   "Q103360": [
+    "reverse"
+   ],
+   "Q10336568": [
+    "reverse"
+   ],
+   "Q103618": [
+    "reverse"
+   ],
+   "Q103916": [
+    "reverse"
+   ],
+   "Q103939": [
+    "reverse"
+   ],
+   "Q1043197": [
+    "reverse"
+   ],
+   "Q104358": [
+    "reverse"
+   ],
+   "Q1046812": [
+    "reverse"
+   ],
+   "Q1048": [
+    "reverse"
+   ],
+   "Q1048902": [
+    "reverse"
+   ],
+   "Q1049": [
+    "reverse"
+   ],
+   "Q105167": [
+    "reverse"
+   ],
+   "Q10520": [
+    "reverse"
+   ],
+   "Q1052807": [
+    "reverse"
+   ],
+   "Q105460": [
+    "reverse"
+   ],
+   "Q10553309": [
+    "reverse"
+   ],
+   "Q105960": [
+    "reverse"
+   ],
+   "Q1060160": [
+    "reverse"
+   ],
+   "Q106039": [
+    "reverse"
+   ],
+   "Q1061603": [
+    "reverse"
+   ],
+   "Q106481": [
+    "reverse"
+   ],
+   "Q1065": [
+    "reverse"
+   ],
+   "Q1066": [
+    "reverse"
+   ],
+   "Q106648": [
+    "reverse"
+   ],
+   "Q1066707": [
+    "reverse"
+   ],
+   "Q10676": [
+    "reverse"
+   ],
+   "Q10677": [
+    "reverse"
+   ],
+   "Q10680": [
+    "reverse"
+   ],
+   "Q10683": [
+    "reverse"
+   ],
+   "Q1068734": [
+    "reverse"
+   ],
+   "Q1069698": [
+    "reverse"
+   ],
+   "Q10708": [
+    "reverse"
+   ],
+   "Q1073": [
+    "reverse"
+   ],
+   "Q10737": [
+    "reverse"
+   ],
+   "Q10738": [
+    "reverse"
+   ],
+   "Q1075929": [
+    "reverse"
+   ],
+   "Q1076932": [
+    "reverse"
+   ],
+   "Q107769": [
+    "reverse"
+   ],
+   "Q1079023": [
+    "reverse"
+   ],
+   "Q10806": [
+    "reverse"
+   ],
+   "Q10843402": [
+    "reverse"
+   ],
+   "Q10853588": [
+    "reverse"
+   ],
+   "Q1087121": [
+    "reverse"
+   ],
+   "Q1089579": [
+    "reverse"
+   ],
+   "Q1092": [
+    "reverse"
+   ],
+   "Q1097498": [
+    "reverse"
+   ],
+   "Q10993": [
+    "reverse"
+   ],
+   "Q11035": [
+    "reverse"
+   ],
+   "Q11036": [
+    "reverse"
+   ],
+   "Q111332": [
+    "reverse"
+   ],
+   "Q11168": [
+    "reverse"
+   ],
+   "Q11201": [
+    "reverse"
+   ],
+   "Q11220": [
+    "reverse"
+   ],
+   "Q112243": [
+    "reverse"
+   ],
+   "Q1124": [
+    "reverse"
+   ],
+   "Q11268": [
+    "reverse"
+   ],
+   "Q1129916": [
+    "reverse"
+   ],
+   "Q11303": [
+    "reverse"
+   ],
+   "Q11303721": [
+    "reverse"
+   ],
+   "Q1130849": [
+    "reverse"
+   ],
+   "Q1132413": [
+    "reverse"
+   ],
+   "Q11338576": [
+    "reverse"
+   ],
+   "Q11365": [
+    "reverse"
+   ],
+   "Q1137542": [
+    "reverse"
+   ],
+   "Q11401": [
+    "reverse"
+   ],
+   "Q1141037": [
+    "reverse"
+   ],
+   "Q1141795": [
+    "reverse"
+   ],
+   "Q11424": [
+    "reverse"
+   ],
+   "Q11459": [
+    "reverse"
+   ],
+   "Q1156": [
+    "reverse"
+   ],
+   "Q11571": [
+    "reverse"
+   ],
+   "Q11578": [
+    "reverse"
+   ],
+   "Q116": [
+    "reverse"
+   ],
+   "Q11613": [
+    "reverse"
+   ],
+   "Q11617": [
+    "reverse"
+   ],
+   "Q1163715": [
+    "reverse"
+   ],
+   "Q11647": [
+    "reverse"
+   ],
+   "Q11649": [
+    "reverse"
+   ],
+   "Q11658": [
+    "reverse"
+   ],
+   "Q1166": [
+    "reverse"
+   ],
+   "Q11679": [
+    "reverse"
+   ],
+   "Q11696": [
+    "reverse"
+   ],
+   "Q11698": [
+    "reverse"
+   ],
+   "Q11699": [
+    "reverse"
+   ],
+   "Q117": [
+    "reverse"
+   ],
+   "Q11701": [
+    "reverse"
+   ],
+   "Q11708": [
+    "reverse"
+   ],
+   "Q11772": [
+    "reverse"
+   ],
+   "Q11806": [
+    "reverse"
+   ],
+   "Q11812": [
+    "reverse"
+   ],
+   "Q11815": [
+    "reverse"
+   ],
+   "Q11835640": [
+    "reverse"
+   ],
+   "Q11895": [
+    "reverse"
+   ],
+   "Q1191202": [
+    "reverse"
+   ],
+   "Q11930": [
+    "reverse"
+   ],
+   "Q1193867": [
+    "reverse"
+   ],
+   "Q11975": [
+    "reverse"
+   ],
+   "Q119798": [
+    "reverse"
+   ],
+   "Q12003": [
+    "reverse"
+   ],
+   "Q1203": [
+    "reverse"
+   ],
+   "Q1204": [
+    "reverse"
+   ],
+   "Q1204346": [
+    "reverse"
+   ],
+   "Q1212": [
+    "reverse"
+   ],
+   "Q121507": [
+    "reverse"
+   ],
+   "Q1215884": [
+    "reverse"
+   ],
+   "Q1215892": [
+    "reverse"
+   ],
+   "Q121783": [
+    "reverse"
+   ],
+   "Q121842": [
+    "reverse"
+   ],
+   "Q12206942": [
+    "reverse"
+   ],
+   "Q1221": [
+    "reverse"
+   ],
+   "Q1223": [
+    "reverse"
+   ],
+   "Q1227": [
+    "reverse"
+   ],
+   "Q123078": [
+    "reverse"
+   ],
+   "Q123737": [
+    "reverse"
+   ],
+   "Q12379": [
+    "reverse"
+   ],
+   "Q12391356": [
+    "reverse"
+   ],
+   "Q12393": [
+    "reverse"
+   ],
+   "Q12413618": [
+    "reverse"
+   ],
+   "Q124179": [
+    "reverse"
+   ],
+   "Q12418": [
+    "reverse"
+   ],
+   "Q1247790": [
+    "reverse"
+   ],
+   "Q1250520": [
+    "reverse"
+   ],
+   "Q12551": [
+    "reverse"
+   ],
+   "Q12557": [
+    "reverse"
+   ],
+   "Q12560": [
+    "reverse"
+   ],
+   "Q12567": [
+    "reverse"
+   ],
+   "Q1257444": [
+    "reverse"
+   ],
+   "Q12579896": [
+    "reverse"
+   ],
+   "Q12583": [
+    "reverse"
+   ],
+   "Q125904": [
+    "reverse"
+   ],
+   "Q1261": [
+    "reverse"
+   ],
+   "Q12630": [
+    "reverse"
+   ],
+   "Q126599": [
+    "reverse"
+   ],
+   "Q126826": [
+    "reverse"
+   ],
+   "Q127552": [
+    "reverse"
+   ],
+   "Q128069": [
+    "reverse"
+   ],
+   "Q128109": [
+    "reverse"
+   ],
+   "Q128121": [
+    "reverse"
+   ],
+   "Q1285": [
+    "reverse"
+   ],
+   "Q128532": [
+    "reverse"
+   ],
+   "Q128799": [
+    "reverse"
+   ],
+   "Q12881": [
+    "reverse"
+   ],
+   "Q12897": [
+    "reverse"
+   ],
+   "Q129041": [
+    "reverse"
+   ],
+   "Q129240": [
+    "reverse"
+   ],
+   "Q129591": [
+    "reverse"
+   ],
+   "Q1297": [
+    "reverse"
+   ],
+   "Q129817": [
+    "reverse"
+   ],
+   "Q1299": [
+    "reverse"
+   ],
+   "Q130798": [
+    "reverse"
+   ],
+   "Q130847": [
+    "reverse"
+   ],
+   "Q131013": [
+    "reverse"
+   ],
+   "Q131036": [
+    "reverse"
+   ],
+   "Q131074": [
+    "reverse"
+   ],
+   "Q131285": [
+    "reverse"
+   ],
+   "Q131364": [
+    "reverse"
+   ],
+   "Q131371": [
+    "reverse"
+   ],
+   "Q131412": [
+    "reverse"
+   ],
+   "Q131454": [
+    "reverse"
+   ],
+   "Q1316719": [
+    "reverse"
+   ],
+   "Q132020": [
+    "reverse"
+   ],
+   "Q1321": [
+    "reverse"
+   ],
+   "Q13218630": [
+    "reverse"
+   ],
+   "Q1323565": [
+    "reverse"
+   ],
+   "Q132730": [
+    "reverse"
+   ],
+   "Q132880": [
+    "reverse"
+   ],
+   "Q132893": [
+    "reverse"
+   ],
+   "Q132952": [
+    "reverse"
+   ],
+   "Q1330974": [
+    "reverse"
+   ],
+   "Q133311": [
+    "reverse"
+   ],
+   "Q133313": [
+    "reverse"
+   ],
+   "Q13361286": [
+    "reverse"
+   ],
+   "Q13371": [
+    "reverse"
+   ],
+   "Q134233": [
+    "reverse"
+   ],
+   "Q134309": [
+    "reverse"
+   ],
+   "Q1345": [
+    "reverse"
+   ],
+   "Q134541": [
+    "reverse"
+   ],
+   "Q13476175": [
+    "reverse"
+   ],
+   "Q134969": [
+    "reverse"
+   ],
+   "Q1352230": [
+    "reverse"
+   ],
+   "Q1356352": [
+    "reverse"
+   ],
+   "Q13580495": [
+    "reverse"
+   ],
+   "Q136678": [
+    "reverse"
+   ],
+   "Q1367988": [
+    "reverse"
+   ],
+   "Q136816": [
+    "reverse"
+   ],
+   "Q1370": [
+    "reverse"
+   ],
+   "Q137341": [
+    "reverse"
+   ],
+   "Q137374": [
+    "reverse"
+   ],
+   "Q1377745": [
+    "reverse"
+   ],
+   "Q138089": [
+    "reverse"
+   ],
+   "Q1383563": [
+    "reverse"
+   ],
+   "Q1384": [
+    "reverse"
+   ],
+   "Q1387": [
+    "reverse"
+   ],
+   "Q13909": [
+    "reverse"
+   ],
+   "Q1391": [
+    "reverse"
+   ],
+   "Q1393": [
+    "reverse"
+   ],
+   "Q1397": [
+    "reverse"
+   ],
+   "Q1400": [
+    "reverse"
+   ],
+   "Q1405": [
+    "reverse"
+   ],
+   "Q1406": [
+    "reverse"
+   ],
+   "Q1407424": [
+    "reverse"
+   ],
+   "Q1408": [
+    "reverse"
+   ],
+   "Q1409": [
+    "reverse"
+   ],
+   "Q1414246": [
+    "reverse"
+   ],
+   "Q1415": [
+    "reverse"
+   ],
+   "Q14171368": [
+    "reverse"
+   ],
+   "Q1419": [
+    "reverse"
+   ],
+   "Q142": [
+    "reverse"
+   ],
+   "Q1420": [
+    "reverse"
+   ],
+   "Q14212": [
+    "reverse"
+   ],
+   "Q14213": [
+    "reverse"
+   ],
+   "Q1424": [
+    "reverse"
+   ],
+   "Q1426": [
+    "reverse"
+   ],
+   "Q142794": [
+    "reverse"
+   ],
+   "Q1428": [
+    "reverse"
+   ],
+   "Q14313": [
+    "reverse"
+   ],
+   "Q143451": [
+    "reverse"
+   ],
+   "Q143762": [
+    "reverse"
+   ],
+   "Q1439": [
+    "reverse"
+   ],
+   "Q14428": [
+    "reverse"
+   ],
+   "Q1446672": [
+    "reverse"
+   ],
+   "Q145": [
+    "reverse"
+   ],
+   "Q1450": [
+    "reverse"
+   ],
+   "Q1453643": [
+    "reverse"
+   ],
+   "Q1454": [
+    "reverse"
+   ],
+   "Q1456": [
+    "reverse"
+   ],
+   "Q146027": [
+    "reverse"
+   ],
+   "Q14629485": [
+    "reverse"
+   ],
+   "Q147077": [
+    "reverse"
+   ],
+   "Q1471089": [
+    "reverse"
+   ],
+   "Q1472235": [
+    "reverse"
+   ],
+   "Q1478420": [
+    "reverse"
+   ],
+   "Q148": [
+    "reverse"
+   ],
+   "Q1489": [
+    "reverse"
+   ],
+   "Q1490": [
+    "reverse"
+   ],
+   "Q1492": [
+    "reverse"
+   ],
+   "Q1494": [
+    "reverse"
+   ],
+   "Q1496": [
+    "reverse"
+   ],
+   "Q1497": [
+    "reverse"
+   ],
+   "Q15": [
+    "reverse"
+   ],
+   "Q150": [
+    "reverse"
+   ],
+   "Q1501747": [
+    "reverse"
+   ],
+   "Q15031": [
+    "reverse"
+   ],
+   "Q1509": [
+    "reverse"
+   ],
+   "Q15123969": [
+    "reverse"
+   ],
+   "Q151241": [
+    "reverse"
+   ],
+   "Q1514249": [
+    "reverse"
+   ],
+   "Q15180": [
+    "reverse"
+   ],
+   "Q151892": [
+    "reverse"
+   ],
+   "Q1522": [
+    "reverse"
+   ],
+   "Q15228": [
+    "reverse"
+   ],
+   "Q15238167": [
+    "reverse"
+   ],
+   "Q15243387": [
+    "reverse"
+   ],
+   "Q1527": [
+    "reverse"
+   ],
+   "Q152929": [
+    "reverse"
+   ],
+   "Q153056": [
+    "reverse"
+   ],
+   "Q15416": [
+    "reverse"
+   ],
+   "Q1542213": [
+    "reverse"
+   ],
+   "Q154454": [
+    "reverse"
+   ],
+   "Q1546": [
+    "reverse"
+   ],
+   "Q154697": [
+    "reverse"
+   ],
+   "Q155": [
+    "reverse"
+   ],
+   "Q155223": [
+    "reverse"
+   ],
+   "Q15613992": [
+    "reverse"
+   ],
+   "Q15615": [
+    "reverse"
+   ],
+   "Q15686806": [
+    "reverse"
+   ],
+   "Q157376": [
+    "reverse"
+   ],
+   "Q1581": [
+    "reverse"
+   ],
+   "Q158419": [
+    "reverse"
+   ],
+   "Q15862": [
+    "reverse"
+   ],
+   "Q15869": [
+    "reverse"
+   ],
+   "Q15878": [
+    "reverse"
+   ],
+   "Q15885268": [
+    "reverse"
+   ],
+   "Q159": [
+    "reverse"
+   ],
+   "Q15920": [
+    "reverse"
+   ],
+   "Q15935": [
+    "reverse"
+   ],
+   "Q159351": [
+    "reverse"
+   ],
+   "Q15946610": [
+    "reverse"
+   ],
+   "Q159729": [
+    "reverse"
+   ],
+   "Q15981151": [
+    "reverse"
+   ],
+   "Q16": [
+    "reverse"
+   ],
+   "Q160009": [
+    "reverse"
+   ],
+   "Q160219": [
+    "reverse"
+   ],
+   "Q1603": [
+    "reverse"
+   ],
+   "Q1605137": [
+    "reverse"
+   ],
+   "Q1612": [
+    "reverse"
+   ],
+   "Q161337": [
+    "reverse"
+   ],
+   "Q161345": [
+    "reverse"
+   ],
+   "Q161652": [
+    "reverse"
+   ],
+   "Q161819": [
+    "reverse"
+   ],
+   "Q161916": [
+    "reverse"
+   ],
+   "Q162202": [
+    "reverse"
+   ],
+   "Q16234676": [
+    "reverse"
+   ],
+   "Q16297": [
+    "reverse"
+   ],
+   "Q162990": [
+    "reverse"
+   ],
+   "Q16311": [
+    "reverse"
+   ],
+   "Q163132": [
+    "reverse"
+   ],
+   "Q16338": [
+    "reverse"
+   ],
+   "Q16397": [
+    "reverse"
+   ],
+   "Q163989": [
+    "reverse"
+   ],
+   "Q164119": [
+    "reverse"
+   ],
+   "Q1646482": [
+    "reverse"
+   ],
+   "Q1649": [
+    "reverse"
+   ],
+   "Q164974": [
+    "reverse"
+   ],
+   "Q165219": [
+    "reverse"
+   ],
+   "Q16551": [
+    "reverse"
+   ],
+   "Q165512": [
+    "reverse"
+   ],
+   "Q165518": [
+    "reverse"
+   ],
+   "Q165524": [
+    "reverse"
+   ],
+   "Q16553": [
+    "reverse"
+   ],
+   "Q16554": [
+    "reverse"
+   ],
+   "Q165557": [
+    "reverse"
+   ],
+   "Q16559": [
+    "reverse"
+   ],
+   "Q16563": [
+    "reverse"
+   ],
+   "Q165713": [
+    "reverse"
+   ],
+   "Q1657833": [
+    "reverse"
+   ],
+   "Q166105": [
+    "reverse"
+   ],
+   "Q166177": [
+    "reverse"
+   ],
+   "Q16635": [
+    "reverse"
+   ],
+   "Q16759": [
+    "reverse"
+   ],
+   "Q167835": [
+    "reverse"
+   ],
+   "Q16867": [
+    "reverse"
+   ],
+   "Q16869": [
+    "reverse"
+   ],
+   "Q168728": [
+    "reverse"
+   ],
+   "Q16882407": [
+    "reverse"
+   ],
+   "Q168983": [
+    "reverse"
+   ],
+   "Q169138": [
+    "reverse"
+   ],
+   "Q169963": [
+    "reverse"
+   ],
+   "Q17": [
+    "reverse"
+   ],
+   "Q17003430": [
+    "reverse"
+   ],
+   "Q170420": [
+    "reverse"
+   ],
+   "Q170583": [
+    "reverse"
+   ],
+   "Q170826": [
+    "reverse"
+   ],
+   "Q17140": [
+    "reverse"
+   ],
+   "Q172435": [
+    "reverse"
+   ],
+   "Q172640": [
+    "reverse"
+   ],
+   "Q172653": [
+    "reverse"
+   ],
+   "Q172678": [
+    "reverse"
+   ],
+   "Q1727138": [
+    "reverse"
+   ],
+   "Q172742": [
+    "reverse"
+   ],
+   "Q17281073": [
+    "reverse"
+   ],
+   "Q173": [
+    "reverse"
+   ],
+   "Q173180": [
+    "reverse"
+   ],
+   "Q173637": [
+    "reverse"
+   ],
+   "Q174097": [
+    "reverse"
+   ],
+   "Q1744": [
+    "reverse"
+   ],
+   "Q17452": [
+    "reverse"
+   ],
+   "Q1747150": [
+    "reverse"
+   ],
+   "Q1747689": [
+    "reverse"
+   ],
+   "Q174843": [
+    "reverse"
+   ],
+   "Q174957": [
+    "reverse"
+   ],
+   "Q175173": [
+    "reverse"
+   ],
+   "Q175391": [
+    "reverse"
+   ],
+   "Q175535": [
+    "reverse"
+   ],
+   "Q1761": [
+    "reverse"
+   ],
+   "Q1764": [
+    "reverse"
+   ],
+   "Q177220": [
+    "reverse"
+   ],
+   "Q17738": [
+    "reverse"
+   ],
+   "Q178166": [
+    "reverse"
+   ],
+   "Q178197": [
+    "reverse"
+   ],
+   "Q178348": [
+    "reverse"
+   ],
+   "Q178561": [
+    "reverse"
+   ],
+   "Q178824": [
+    "reverse"
+   ],
+   "Q179157": [
+    "reverse"
+   ],
+   "Q179191": [
+    "reverse"
+   ],
+   "Q179257": [
+    "reverse"
+   ],
+   "Q179497": [
+    "reverse"
+   ],
+   "Q18": [
+    "reverse"
+   ],
+   "Q180072": [
+    "reverse"
+   ],
+   "Q180402": [
+    "reverse"
+   ],
+   "Q180453": [
+    "reverse"
+   ],
+   "Q180598": [
+    "reverse"
+   ],
+   "Q1806079": [
+    "reverse"
+   ],
+   "Q180704": [
+    "reverse"
+   ],
+   "Q180880": [
+    "reverse"
+   ],
+   "Q18094": [
+    "reverse"
+   ],
+   "Q181264": [
+    "reverse"
+   ],
+   "Q181278": [
+    "reverse"
+   ],
+   "Q18149622": [
+    "reverse"
+   ],
+   "Q18156180": [
+    "reverse"
+   ],
+   "Q181677": [
+    "reverse"
+   ],
+   "Q181765": [
+    "reverse"
+   ],
+   "Q181795": [
+    "reverse"
+   ],
+   "Q181900": [
+    "reverse"
+   ],
+   "Q182172": [
+    "reverse"
+   ],
+   "Q182218": [
+    "reverse"
+   ],
+   "Q182223": [
+    "reverse"
+   ],
+   "Q182531": [
+    "reverse"
+   ],
+   "Q182736": [
+    "reverse"
+   ],
+   "Q182865": [
+    "reverse"
+   ],
+   "Q182950": [
+    "reverse"
+   ],
+   "Q183": [
+    "reverse"
+   ],
+   "Q183048": [
+    "reverse"
+   ],
+   "Q183259": [
+    "reverse"
+   ],
+   "Q183287": [
+    "reverse"
+   ],
+   "Q183484": [
+    "reverse"
+   ],
+   "Q183492": [
+    "reverse"
+   ],
+   "Q183542": [
+    "reverse"
+   ],
+   "Q18389": [
+    "reverse"
+   ],
+   "Q1841": [
+    "reverse"
+   ],
+   "Q18419": [
+    "reverse"
+   ],
+   "Q184198": [
+    "reverse"
+   ],
+   "Q18438": [
+    "reverse"
+   ],
+   "Q184425": [
+    "reverse"
+   ],
+   "Q1845": [
+    "reverse"
+   ],
+   "Q1848": [
+    "reverse"
+   ],
+   "Q184827": [
+    "reverse"
+   ],
+   "Q184839": [
+    "reverse"
+   ],
+   "Q18486021": [
+    "reverse"
+   ],
+   "Q185051": [
+    "reverse"
+   ],
+   "Q18515944": [
+    "reverse"
+   ],
+   "Q1854": [
+    "reverse"
+   ],
+   "Q185828": [
+    "reverse"
+   ],
+   "Q186080": [
+    "reverse"
+   ],
+   "Q1862087": [
+    "reverse"
+   ],
+   "Q18642757": [
+    "reverse"
+   ],
+   "Q186437": [
+    "reverse"
+   ],
+   "Q186485": [
+    "reverse"
+   ],
+   "Q186516": [
+    "reverse"
+   ],
+   "Q18656": [
+    "reverse"
+   ],
+   "Q1868663": [
+    "reverse"
+   ],
+   "Q18716": [
+    "reverse"
+   ],
+   "Q187266": [
+    "reverse"
+   ],
+   "Q1874": [
+    "reverse"
+   ],
+   "Q18741": [
+    "reverse"
+   ],
+   "Q187462": [
+    "reverse"
+   ],
+   "Q18756": [
+    "reverse"
+   ],
+   "Q18810940": [
+    "reverse"
+   ],
+   "Q188137": [
+    "reverse"
+   ],
+   "Q188273": [
+    "reverse"
+   ],
+   "Q1883234": [
+    "reverse"
+   ],
+   "Q188407": [
+    "reverse"
+   ],
+   "Q188642": [
+    "reverse"
+   ],
+   "Q188760": [
+    "reverse"
+   ],
+   "Q188772": [
+    "reverse"
+   ],
+   "Q188969": [
+    "reverse"
+   ],
+   "Q189": [
+    "reverse"
+   ],
+   "Q189004": [
+    "reverse"
+   ],
+   "Q189267": [
+    "reverse"
+   ],
+   "Q189599": [
+    "reverse"
+   ],
+   "Q189635": [
+    "reverse"
+   ],
+   "Q189694": [
+    "reverse"
+   ],
+   "Q190094": [
+    "reverse"
+   ],
+   "Q190155": [
+    "reverse"
+   ],
+   "Q19020": [
+    "reverse"
+   ],
+   "Q190220": [
+    "reverse"
+   ],
+   "Q190379": [
+    "reverse"
+   ],
+   "Q190618": [
+    "reverse"
+   ],
+   "Q190679": [
+    "reverse"
+   ],
+   "Q191282": [
+    "reverse"
+   ],
+   "Q191324": [
+    "reverse"
+   ],
+   "Q191477": [
+    "reverse"
+   ],
+   "Q191503": [
+    "reverse"
+   ],
+   "Q19155": [
+    "reverse"
+   ],
+   "Q191626": [
+    "reverse"
+   ],
+   "Q191819": [
+    "reverse"
+   ],
+   "Q192156": [
+    "reverse"
+   ],
+   "Q192353": [
+    "reverse"
+   ],
+   "Q192463": [
+    "reverse"
+   ],
+   "Q192517": [
+    "reverse"
+   ],
+   "Q192626": [
+    "reverse"
+   ],
+   "Q192682": [
+    "reverse"
+   ],
+   "Q192724": [
+    "reverse"
+   ],
+   "Q192769": [
+    "reverse"
+   ],
+   "Q193108": [
+    "reverse"
+   ],
+   "Q19317": [
+    "reverse"
+   ],
+   "Q193259": [
+    "reverse"
+   ],
+   "Q193390": [
+    "reverse"
+   ],
+   "Q193517": [
+    "reverse"
+   ],
+   "Q193659": [
+    "reverse"
+   ],
+   "Q193668": [
+    "reverse"
+   ],
+   "Q193753": [
+    "reverse"
+   ],
+   "Q193884": [
+    "reverse"
+   ],
+   "Q194116": [
+    "reverse"
+   ],
+   "Q194220": [
+    "reverse"
+   ],
+   "Q194333": [
+    "reverse"
+   ],
+   "Q194369": [
+    "reverse"
+   ],
+   "Q19482": [
+    "reverse"
+   ],
+   "Q19610114": [
+    "reverse"
+   ],
+   "Q196185": [
+    "reverse"
+   ],
+   "Q19673326": [
+    "reverse"
+   ],
+   "Q1968": [
+    "reverse"
+   ],
+   "Q197": [
+    "reverse"
+   ],
+   "Q198": [
+    "reverse"
+   ],
+   "Q19848": [
+    "reverse"
+   ],
+   "Q1990805": [
+    "reverse"
+   ],
+   "Q2": [
+    "reverse"
+   ],
+   "Q20": [
+    "reverse"
+   ],
+   "Q200092": [
+    "reverse"
+   ],
+   "Q2006628": [
+    "reverse"
+   ],
+   "Q201052": [
+    "reverse"
+   ],
+   "Q202975": [
+    "reverse"
+   ],
+   "Q203184": [
+    "reverse"
+   ],
+   "Q204018": [
+    "reverse"
+   ],
+   "Q204474": [
+    "reverse"
+   ],
+   "Q204862": [
+    "reverse"
+   ],
+   "Q205028": [
+    "reverse"
+   ],
+   "Q205325": [
+    "reverse"
+   ],
+   "Q205707": [
+    "reverse"
+   ],
+   "Q205796": [
+    "reverse"
+   ],
+   "Q206261": [
+    "reverse"
+   ],
+   "Q20645861": [
+    "reverse"
+   ],
+   "Q20657541": [
+    "reverse"
+   ],
+   "Q2066131": [
+    "reverse"
+   ],
+   "Q207": [
+    "reverse"
+   ],
+   "Q207708": [
+    "reverse"
+   ],
+   "Q207784": [
+    "reverse"
+   ],
+   "Q207922": [
+    "reverse"
+   ],
+   "Q208460": [
+    "reverse"
+   ],
+   "Q208623": [
+    "reverse"
+   ],
+   "Q20878491": [
+    "reverse"
+   ],
+   "Q209868": [
+    "reverse"
+   ],
+   "Q209956": [
+    "reverse"
+   ],
+   "Q21": [
+    "reverse"
+   ],
+   "Q210059": [
+    "reverse"
+   ],
+   "Q2102": [
+    "reverse"
+   ],
+   "Q21039915": [
+    "reverse"
+   ],
+   "Q210447": [
+    "reverse"
+   ],
+   "Q210593": [
+    "reverse"
+   ],
+   "Q211583": [
+    "reverse"
+   ],
+   "Q211770": [
+    "reverse"
+   ],
+   "Q211872": [
+    "reverse"
+   ],
+   "Q21195": [
+    "reverse"
+   ],
+   "Q212": [
+    "reverse"
+   ],
+   "Q2121062": [
+    "reverse"
+   ],
+   "Q212434": [
+    "reverse"
+   ],
+   "Q212464": [
+    "reverse"
+   ],
+   "Q212533": [
+    "reverse"
+   ],
+   "Q212654": [
+    "reverse"
+   ],
+   "Q212900": [
+    "reverse"
+   ],
+   "Q213417": [
+    "reverse"
+   ],
+   "Q213665": [
+    "reverse"
+   ],
+   "Q213812": [
+    "reverse"
+   ],
+   "Q213837": [
+    "reverse"
+   ],
+   "Q213841": [
+    "reverse"
+   ],
+   "Q213959": [
+    "reverse"
+   ],
+   "Q214174": [
+    "reverse"
+   ],
+   "Q214418": [
+    "reverse"
+   ],
+   "Q215072": [
+    "reverse"
+   ],
+   "Q215359": [
+    "reverse"
+   ],
+   "Q215380": [
+    "reverse"
+   ],
+   "Q216655": [
+    "reverse"
+   ],
+   "Q216930": [
+    "reverse"
+   ],
+   "Q216995": [
+    "reverse"
+   ],
+   "Q217": [
+    "reverse"
+   ],
+   "Q217020": [
+    "reverse"
+   ],
+   "Q217160": [
+    "reverse"
+   ],
+   "Q217533": [
+    "reverse"
+   ],
+   "Q218": [
+    "reverse"
+   ],
+   "Q2184": [
+    "reverse"
+   ],
+   "Q219": [
+    "reverse"
+   ],
+   "Q219377": [
+    "reverse"
+   ],
+   "Q219714": [
+    "reverse"
+   ],
+   "Q219780": [
+    "reverse"
+   ],
+   "Q22": [
+    "reverse"
+   ],
+   "Q220": [
+    "reverse"
+   ],
+   "Q220260": [
+    "reverse"
+   ],
+   "Q220308": [
+    "reverse"
+   ],
+   "Q220918": [
+    "reverse"
+   ],
+   "Q221150": [
+    "reverse"
+   ],
+   "Q221469": [
+    "reverse"
+   ],
+   "Q221626": [
+    "reverse"
+   ],
+   "Q221878": [
+    "reverse"
+   ],
+   "Q222": [
+    "reverse"
+   ],
+   "Q222047": [
+    "reverse"
+   ],
+   "Q222695": [
+    "reverse"
+   ],
+   "Q222749": [
+    "reverse"
+   ],
+   "Q223": [
+    "reverse"
+   ],
+   "Q223243": [
+    "reverse"
+   ],
+   "Q223313": [
+    "reverse"
+   ],
+   "Q223341": [
+    "reverse"
+   ],
+   "Q223507": [
+    "reverse"
+   ],
+   "Q223514": [
+    "reverse"
+   ],
+   "Q223522": [
+    "reverse"
+   ],
+   "Q223527": [
+    "reverse"
+   ],
+   "Q223769": [
+    "reverse"
+   ],
+   "Q223969": [
+    "reverse"
+   ],
+   "Q224": [
+    "reverse"
+   ],
+   "Q224164": [
+    "reverse"
+   ],
+   "Q2263": [
+    "reverse"
+   ],
+   "Q22686": [
+    "reverse"
+   ],
+   "Q2269": [
+    "reverse"
+   ],
+   "Q22692": [
+    "reverse"
+   ],
+   "Q2277": [
+    "reverse"
+   ],
+   "Q228": [
+    "reverse"
+   ],
+   "Q2283": [
+    "reverse"
+   ],
+   "Q228603": [
+    "reverse"
+   ],
+   "Q22923830": [
+    "reverse"
+   ],
+   "Q229375": [
+    "reverse"
+   ],
+   "Q229390": [
+    "reverse"
+   ],
+   "Q22989102": [
+    "reverse"
+   ],
+   "Q23": [
+    "reverse"
+   ],
+   "Q23013817": [
+    "reverse"
+   ],
+   "Q2306": [
+    "reverse"
+   ],
+   "Q2307373": [
+    "reverse"
+   ],
+   "Q2316201": [
+    "reverse"
+   ],
+   "Q2316684": [
+    "reverse"
+   ],
+   "Q2320005": [
+    "reverse"
+   ],
+   "Q232120": [
+    "reverse"
+   ],
+   "Q23215": [
+    "reverse"
+   ],
+   "Q233033": [
+    "reverse"
+   ],
+   "Q2331": [
+    "reverse"
+   ],
+   "Q233563": [
+    "reverse"
+   ],
+   "Q2336369": [
+    "reverse"
+   ],
+   "Q233808": [
+    "reverse"
+   ],
+   "Q23392": [
+    "reverse"
+   ],
+   "Q233929": [
+    "reverse"
+   ],
+   "Q23397": [
+    "reverse"
+   ],
+   "Q234141": [
+    "reverse"
+   ],
+   "Q23434": [
+    "reverse"
+   ],
+   "Q23442": [
+    "reverse"
+   ],
+   "Q234691": [
+    "reverse"
+   ],
+   "Q23505": [
+    "reverse"
+   ],
+   "Q235252": [
+    "reverse"
+   ],
+   "Q23540": [
+    "reverse"
+   ],
+   "Q23556": [
+    "reverse"
+   ],
+   "Q23633": [
+    "reverse"
+   ],
+   "Q236336": [
+    "reverse"
+   ],
+   "Q23666": [
+    "reverse"
+   ],
+   "Q23685": [
+    "reverse"
+   ],
+   "Q237": [
+    "reverse"
+   ],
+   "Q23733": [
+    "reverse"
+   ],
+   "Q23768": [
+    "reverse"
+   ],
+   "Q23771950": [
+    "reverse"
+   ],
+   "Q23780734": [
+    "reverse"
+   ],
+   "Q23780914": [
+    "reverse"
+   ],
+   "Q23781155": [
+    "reverse"
+   ],
+   "Q237896": [
+    "reverse"
+   ],
+   "Q238095": [
+    "reverse"
+   ],
+   "Q23844": [
+    "reverse"
+   ],
+   "Q241": [
+    "reverse"
+   ],
+   "Q241163": [
+    "reverse"
+   ],
+   "Q2414469": [
+    "reverse"
+   ],
+   "Q242352": [
+    "reverse"
+   ],
+   "Q243": [
+    "reverse"
+   ],
+   "Q245247": [
+    "reverse"
+   ],
+   "Q245990": [
+    "reverse"
+   ],
+   "Q246782": [
+    "reverse"
+   ],
+   "Q247420": [
+    "reverse"
+   ],
+   "Q24826": [
+    "reverse"
+   ],
+   "Q24856": [
+    "reverse"
+   ],
+   "Q24861": [
+    "reverse"
+   ],
+   "Q25056945": [
+    "reverse"
+   ],
+   "Q25144": [
+    "reverse"
+   ],
+   "Q2515184": [
+    "reverse"
+   ],
+   "Q252": [
+    "reverse"
+   ],
+   "Q2526255": [
+    "reverse"
+   ],
+   "Q25280": [
+    "reverse"
+   ],
+   "Q253295": [
+    "reverse"
+   ],
+   "Q25369": [
+    "reverse"
+   ],
+   "Q25395": [
+    "reverse"
+   ],
+   "Q25397095": [
+    "reverse"
+   ],
+   "Q255": [
+    "reverse"
+   ],
+   "Q255032": [
+    "reverse"
+   ],
+   "Q2562640": [
+    "reverse"
+   ],
+   "Q2570643": [
+    "reverse"
+   ],
+   "Q258": [
+    "reverse"
+   ],
+   "Q259254": [
+    "reverse"
+   ],
+   "Q259776": [
+    "reverse"
+   ],
+   "Q2599": [
+    "reverse"
+   ],
+   "Q26": [
+    "reverse"
+   ],
+   "Q26013": [
+    "reverse"
+   ],
+   "Q261": [
+    "reverse"
+   ],
+   "Q262": [
+    "reverse"
+   ],
+   "Q265538": [
+    "reverse"
+   ],
+   "Q2658216": [
+    "reverse"
+   ],
+   "Q26777": [
+    "reverse"
+   ],
+   "Q2680": [
+    "reverse"
+   ],
+   "Q268160": [
+    "reverse"
+   ],
+   "Q268218": [
+    "reverse"
+   ],
+   "Q2685": [
+    "reverse"
+   ],
+   "Q26876": [
+    "reverse"
+   ],
+   "Q269237": [
+    "reverse"
+   ],
+   "Q2695156": [
+    "reverse"
+   ],
+   "Q269692": [
+    "reverse"
+   ],
+   "Q27": [
+    "reverse"
+   ],
+   "Q27020041": [
+    "reverse"
+   ],
+   "Q270503": [
+    "reverse"
+   ],
+   "Q27062250": [
+    "reverse"
+   ],
+   "Q2707177": [
+    "reverse"
+   ],
+   "Q271395": [
+    "reverse"
+   ],
+   "Q271805": [
+    "reverse"
+   ],
+   "Q271880": [
+    "reverse"
+   ],
+   "Q271984": [
+    "reverse"
+   ],
+   "Q272019": [
+    "reverse"
+   ],
+   "Q272076": [
+    "reverse"
+   ],
+   "Q27231": [
+    "reverse"
+   ],
+   "Q27381": [
+    "reverse"
+   ],
+   "Q2743": [
+    "reverse"
+   ],
+   "Q27438121": [
+    "reverse"
+   ],
+   "Q27593": [
+    "reverse"
+   ],
+   "Q275955": [
+    "reverse"
+   ],
+   "Q27611": [
+    "reverse"
+   ],
+   "Q27671080": [
+    "reverse"
+   ],
+   "Q277551": [
+    "reverse"
+   ],
+   "Q2778220": [
+    "reverse"
+   ],
+   "Q28": [
+    "reverse"
+   ],
+   "Q2801750": [
+    "reverse"
+   ],
+   "Q280275": [
+    "reverse"
+   ],
+   "Q2808": [
+    "reverse"
+   ],
+   "Q280856": [
+    "reverse"
+   ],
+   "Q281939": [
+    "reverse"
+   ],
+   "Q28198": [
+    "reverse"
+   ],
+   "Q282722": [
+    "reverse"
+   ],
+   "Q2831": [
+    "reverse"
+   ],
+   "Q28389": [
+    "reverse"
+   ],
+   "Q285451": [
+    "reverse"
+   ],
+   "Q28567": [
+    "reverse"
+   ],
+   "Q28603": [
+    "reverse"
+   ],
+   "Q288035": [
+    "reverse"
+   ],
+   "Q2899818": [
+    "reverse"
+   ],
+   "Q29": [
+    "reverse"
+   ],
+   "Q2901452": [
+    "reverse"
+   ],
+   "Q2902300": [
+    "reverse"
+   ],
+   "Q29033668": [
+    "reverse"
+   ],
+   "Q290922": [
+    "reverse"
+   ],
+   "Q29250": [
+    "reverse"
+   ],
+   "Q29328": [
+    "reverse"
+   ],
+   "Q29468": [
+    "reverse"
+   ],
+   "Q295020": [
+    "reverse"
+   ],
+   "Q29545": [
+    "reverse"
+   ],
+   "Q29552": [
+    "reverse"
+   ],
+   "Q29564107": [
+    "reverse"
+   ],
+   "Q295964": [
+    "reverse"
+   ],
+   "Q2976730": [
+    "reverse"
+   ],
+   "Q297816": [
+    "reverse"
+   ],
+   "Q297831": [
+    "reverse"
+   ],
+   "Q298": [
+    "reverse"
+   ],
+   "Q298685": [
+    "reverse"
+   ],
+   "Q298694": [
+    "reverse"
+   ],
+   "Q30": [
+    "reverse"
+   ],
+   "Q300386": [
+    "reverse"
+   ],
+   "Q30103": [
+    "reverse"
+   ],
+   "Q303": [
+    "reverse"
+   ],
+   "Q304675": [
+    "reverse"
+   ],
+   "Q30487": [
+    "reverse"
+   ],
+   "Q30547": [
+    "reverse"
+   ],
+   "Q3087893": [
+    "reverse"
+   ],
+   "Q3090378": [
+    "reverse"
+   ],
+   "Q309631": [
+    "reverse"
+   ],
+   "Q309783": [
+    "reverse"
+   ],
+   "Q309843": [
+    "reverse"
+   ],
+   "Q310924": [
+    "reverse"
+   ],
+   "Q311836": [
+    "reverse"
+   ],
+   "Q3130": [
+    "reverse"
+   ],
+   "Q315577": [
+    "reverse"
+   ],
+   "Q31683": [
+    "reverse"
+   ],
+   "Q318204": [
+    "reverse"
+   ],
+   "Q318223": [
+    "reverse"
+   ],
+   "Q3185264": [
+    "reverse"
+   ],
+   "Q3188089": [
+    "reverse"
+   ],
+   "Q32": [
+    "reverse"
+   ],
+   "Q320476": [
+    "reverse"
+   ],
+   "Q32096": [
+    "reverse"
+   ],
+   "Q3225260": [
+    "reverse"
+   ],
+   "Q324726": [
+    "reverse"
+   ],
+   "Q324867": [
+    "reverse"
+   ],
+   "Q326704": [
+    "reverse"
+   ],
+   "Q328212": [
+    "reverse"
+   ],
+   "Q329888": [
+    "reverse"
+   ],
+   "Q33132": [
+    "reverse"
+   ],
+   "Q331397": [
+    "reverse"
+   ],
+   "Q33143": [
+    "reverse"
+   ],
+   "Q332032": [
+    "reverse"
+   ],
+   "Q33240": [
+    "reverse"
+   ],
+   "Q332498": [
+    "reverse"
+   ],
+   "Q3335": [
+    "reverse"
+   ],
+   "Q333886": [
+    "reverse"
+   ],
+   "Q33391": [
+    "reverse"
+   ],
+   "Q334634": [
+    "reverse"
+   ],
+   "Q335169": [
+    "reverse"
+   ],
+   "Q33569": [
+    "reverse"
+   ],
+   "Q337377": [
+    "reverse"
+   ],
+   "Q33741": [
+    "reverse"
+   ],
+   "Q33745": [
+    "reverse"
+   ],
+   "Q3378593": [
+    "reverse"
+   ],
+   "Q33866": [
+    "reverse"
+   ],
+   "Q3392": [
+    "reverse"
+   ],
+   "Q33999": [
+    "reverse"
+   ],
+   "Q34": [
+    "reverse"
+   ],
+   "Q34006": [
+    "reverse"
+   ],
+   "Q34038": [
+    "reverse"
+   ],
+   "Q34086": [
+    "reverse"
+   ],
+   "Q342604": [
+    "reverse"
+   ],
+   "Q34389": [
+    "reverse"
+   ],
+   "Q34417": [
+    "reverse"
+   ],
+   "Q34436": [
+    "reverse"
+   ],
+   "Q3445057": [
+    "reverse"
+   ],
+   "Q345431": [
+    "reverse"
+   ],
+   "Q34660": [
+    "reverse"
+   ],
+   "Q34726": [
+    "reverse"
+   ],
+   "Q34969": [
+    "reverse"
+   ],
+   "Q34981": [
+    "reverse"
+   ],
+   "Q34990": [
+    "reverse"
+   ],
+   "Q35": [
+    "reverse"
+   ],
+   "Q35064": [
+    "reverse"
+   ],
+   "Q35140": [
+    "reverse"
+   ],
+   "Q35160": [
+    "reverse"
+   ],
+   "Q352": [
+    "reverse"
+   ],
+   "Q352159": [
+    "reverse"
+   ],
+   "Q353137": [
+    "reverse"
+   ],
+   "Q35332": [
+    "reverse"
+   ],
+   "Q35525": [
+    "reverse"
+   ],
+   "Q35610": [
+    "reverse"
+   ],
+   "Q35637": [
+    "reverse"
+   ],
+   "Q356487": [
+    "reverse"
+   ],
+   "Q35657": [
+    "reverse"
+   ],
+   "Q36": [
+    "reverse"
+   ],
+   "Q3604": [
+    "reverse"
+   ],
+   "Q361": [
+    "reverse"
+   ],
+   "Q36153": [
+    "reverse"
+   ],
+   "Q36159": [
+    "reverse"
+   ],
+   "Q36180": [
+    "reverse"
+   ],
+   "Q362": [
+    "reverse"
+   ],
+   "Q3626950": [
+    "reverse"
+   ],
+   "Q3626966": [
+    "reverse"
+   ],
+   "Q36290": [
+    "reverse"
+   ],
+   "Q36322": [
+    "reverse"
+   ],
+   "Q3632455": [
+    "reverse"
+   ],
+   "Q363246": [
+    "reverse"
+   ],
+   "Q364394": [
+    "reverse"
+   ],
+   "Q36450": [
+    "reverse"
+   ],
+   "Q36456": [
+    "reverse"
+   ],
+   "Q36767": [
+    "reverse"
+   ],
+   "Q367825": [
+    "reverse"
+   ],
+   "Q36949": [
+    "reverse"
+   ],
+   "Q370055": [
+    "reverse"
+   ],
+   "Q37079": [
+    "reverse"
+   ],
+   "Q37110": [
+    "reverse"
+   ],
+   "Q37175": [
+    "reverse"
+   ],
+   "Q37230": [
+    "reverse"
+   ],
+   "Q372324": [
+    "reverse"
+   ],
+   "Q37320": [
+    "reverse"
+   ],
+   "Q373501": [
+    "reverse"
+   ],
+   "Q373895": [
+    "reverse"
+   ],
+   "Q373933": [
+    "reverse"
+   ],
+   "Q37628": [
+    "reverse"
+   ],
+   "Q37643": [
+    "reverse"
+   ],
+   "Q3772": [
+    "reverse"
+   ],
+   "Q3783": [
+    "reverse"
+   ],
+   "Q37922": [
+    "reverse"
+   ],
+   "Q38": [
+    "reverse"
+   ],
+   "Q38082": [
+    "reverse"
+   ],
+   "Q380927": [
+    "reverse"
+   ],
+   "Q38111": [
+    "reverse"
+   ],
+   "Q38119": [
+    "reverse"
+   ],
+   "Q38130": [
+    "reverse"
+   ],
+   "Q38222": [
+    "reverse"
+   ],
+   "Q38370": [
+    "reverse"
+   ],
+   "Q38392": [
+    "reverse"
+   ],
+   "Q386995": [
+    "reverse"
+   ],
+   "Q3873144": [
+    "reverse"
+   ],
+   "Q3882219": [
+    "reverse"
+   ],
+   "Q391348": [
+    "reverse"
+   ],
+   "Q39212": [
+    "reverse"
+   ],
+   "Q39231": [
+    "reverse"
+   ],
+   "Q39444": [
+    "reverse"
+   ],
+   "Q39562": [
+    "reverse"
+   ],
+   "Q3958283": [
+    "reverse"
+   ],
+   "Q396": [
+    "reverse"
+   ],
+   "Q3960": [
+    "reverse"
+   ],
+   "Q3966183": [
+    "reverse"
+   ],
+   "Q39792": [
+    "reverse"
+   ],
+   "Q39829": [
+    "reverse"
+   ],
+   "Q40": [
+    "reverse"
+   ],
+   "Q40096": [
+    "reverse"
+   ],
+   "Q4022": [
+    "reverse"
+   ],
+   "Q40430": [
+    "reverse"
+   ],
+   "Q40435": [
+    "reverse"
+   ],
+   "Q405": [
+    "reverse"
+   ],
+   "Q40504": [
+    "reverse"
+   ],
+   "Q40523": [
+    "reverse"
+   ],
+   "Q40531": [
+    "reverse"
+   ],
+   "Q406": [
+    "reverse"
+   ],
+   "Q406039": [
+    "reverse"
+   ],
+   "Q40615": [
+    "reverse"
+   ],
+   "Q40640": [
+    "reverse"
+   ],
+   "Q407622": [
+    "reverse"
+   ],
+   "Q40780": [
+    "reverse"
+   ],
+   "Q40787": [
+    "reverse"
+   ],
+   "Q40791": [
+    "reverse"
+   ],
+   "Q408": [
+    "reverse"
+   ],
+   "Q40909": [
+    "reverse"
+   ],
+   "Q40912": [
+    "reverse"
+   ],
+   "Q40949": [
+    "reverse"
+   ],
+   "Q41": [
+    "reverse"
+   ],
+   "Q41076": [
+    "reverse"
+   ],
+   "Q41148": [
+    "reverse"
+   ],
+   "Q41176": [
+    "reverse"
+   ],
+   "Q41187": [
+    "reverse"
+   ],
+   "Q41254": [
+    "reverse"
+   ],
+   "Q41323": [
+    "reverse"
+   ],
+   "Q41351": [
+    "reverse"
+   ],
+   "Q414": [
+    "reverse"
+   ],
+   "Q41417": [
+    "reverse"
+   ],
+   "Q41421": [
+    "reverse"
+   ],
+   "Q41520": [
+    "reverse"
+   ],
+   "Q41567": [
+    "reverse"
+   ],
+   "Q41583": [
+    "reverse"
+   ],
+   "Q41594": [
+    "reverse"
+   ],
+   "Q4169": [
+    "reverse"
+   ],
+   "Q41796": [
+    "reverse"
+   ],
+   "Q420292": [
+    "reverse"
+   ],
+   "Q42101": [
+    "reverse"
+   ],
+   "Q42178": [
+    "reverse"
+   ],
+   "Q42229": [
+    "reverse"
+   ],
+   "Q4226": [
+    "reverse"
+   ],
+   "Q423": [
+    "reverse"
+   ],
+   "Q4235": [
+    "reverse"
+   ],
+   "Q424": [
+    "reverse"
+   ],
+   "Q42406": [
+    "reverse"
+   ],
+   "Q42493": [
+    "reverse"
+   ],
+   "Q42574": [
+    "reverse"
+   ],
+   "Q42775": [
+    "reverse"
+   ],
+   "Q42869": [
+    "reverse"
+   ],
+   "Q43": [
+    "reverse"
+   ],
+   "Q43203": [
+    "reverse"
+   ],
+   "Q43259": [
+    "reverse"
+   ],
+   "Q43267": [
+    "reverse"
+   ],
+   "Q43274": [
+    "reverse"
+   ],
+   "Q43416": [
+    "reverse"
+   ],
+   "Q43653": [
+    "reverse"
+   ],
+   "Q43720": [
+    "reverse"
+   ],
+   "Q43729": [
+    "reverse"
+   ],
+   "Q43922": [
+    "reverse"
+   ],
+   "Q44063": [
+    "reverse"
+   ],
+   "Q4413456": [
+    "reverse"
+   ],
+   "Q4416090": [
+    "reverse"
+   ],
+   "Q44190": [
+    "reverse"
+   ],
+   "Q44221": [
+    "reverse"
+   ],
+   "Q44437": [
+    "reverse"
+   ],
+   "Q4444669": [
+    "reverse"
+   ],
+   "Q44585": [
+    "reverse"
+   ],
+   "Q4467592": [
+    "reverse"
+   ],
+   "Q4470": [
+    "reverse"
+   ],
+   "Q44703": [
+    "reverse"
+   ],
+   "Q4491": [
+    "reverse"
+   ],
+   "Q4496": [
+    "reverse"
+   ],
+   "Q45": [
+    "reverse"
+   ],
+   "Q45328": [
+    "reverse"
+   ],
+   "Q45354": [
+    "reverse"
+   ],
+   "Q4547": [
+    "reverse"
+   ],
+   "Q45578": [
+    "reverse"
+   ],
+   "Q4558": [
+    "reverse"
+   ],
+   "Q4573": [
+    "reverse"
+   ],
+   "Q45765": [
+    "reverse"
+   ],
+   "Q458": [
+    "reverse"
+   ],
+   "Q458346": [
+    "reverse"
+   ],
+   "Q45875": [
+    "reverse"
+   ],
+   "Q46": [
+    "reverse"
+   ],
+   "Q4604": [
+    "reverse"
+   ],
+   "Q46040": [
+    "reverse"
+   ],
+   "Q461595": [
+    "reverse"
+   ],
+   "Q46169": [
+    "reverse"
+   ],
+   "Q462": [
+    "reverse"
+   ],
+   "Q46248": [
+    "reverse"
+   ],
+   "Q4630676": [
+    "reverse"
+   ],
+   "Q463486": [
+    "reverse"
+   ],
+   "Q464241": [
+    "reverse"
+   ],
+   "Q46525": [
+    "reverse"
+   ],
+   "Q4653": [
+    "reverse"
+   ],
+   "Q465469": [
+    "reverse"
+   ],
+   "Q466530": [
+    "reverse"
+   ],
+   "Q467": [
+    "reverse"
+   ],
+   "Q467423": [
+    "reverse"
+   ],
+   "Q468851": [
+    "reverse"
+   ],
+   "Q46994895": [
+    "reverse"
+   ],
+   "Q47159": [
+    "reverse"
+   ],
+   "Q473466": [
+    "reverse"
+   ],
+   "Q47365": [
+    "reverse"
+   ],
+   "Q47447": [
+    "reverse"
+   ],
+   "Q47566": [
+    "reverse"
+   ],
+   "Q47604": [
+    "reverse"
+   ],
+   "Q47670": [
+    "reverse"
+   ],
+   "Q476871": [
+    "reverse"
+   ],
+   "Q47740": [
+    "reverse"
+   ],
+   "Q47871": [
+    "reverse"
+   ],
+   "Q48": [
+    "reverse"
+   ],
+   "Q480": [
+    "reverse"
+   ],
+   "Q4802838": [
+    "reverse"
+   ],
+   "Q4803535": [
+    "reverse"
+   ],
+   "Q481832": [
+    "reverse"
+   ],
+   "Q482477": [
+    "reverse"
+   ],
+   "Q48263": [
+    "reverse"
+   ],
+   "Q482671": [
+    "reverse"
+   ],
+   "Q482994": [
+    "reverse"
+   ],
+   "Q483020": [
+    "reverse"
+   ],
+   "Q48314": [
+    "reverse"
+   ],
+   "Q483203": [
+    "reverse"
+   ],
+   "Q483352": [
+    "reverse"
+   ],
+   "Q48337": [
+    "reverse"
+   ],
+   "Q483407": [
+    "reverse"
+   ],
+   "Q483718": [
+    "reverse"
+   ],
+   "Q484255": [
+    "reverse"
+   ],
+   "Q484427": [
+    "reverse"
+   ],
+   "Q485240": [
+    "reverse"
+   ],
+   "Q48537": [
+    "reverse"
+   ],
+   "Q4897444": [
+    "reverse"
+   ],
+   "Q489831": [
+    "reverse"
+   ],
+   "Q49": [
+    "reverse"
+   ],
+   "Q49042": [
+    "reverse"
+   ],
+   "Q49074": [
+    "reverse"
+   ],
+   "Q49085": [
+    "reverse"
+   ],
+   "Q49111": [
+    "reverse"
+   ],
+   "Q49117": [
+    "reverse"
+   ],
+   "Q49148": [
+    "reverse"
+   ],
+   "Q49149": [
+    "reverse"
+   ],
+   "Q49213": [
+    "reverse"
+   ],
+   "Q494784": [
+    "reverse"
+   ],
+   "Q49740": [
+    "reverse"
+   ],
+   "Q49845": [
+    "reverse"
+   ],
+   "Q4989906": [
+    "reverse"
+   ],
+   "Q5": [
+    "reverse"
+   ],
+   "Q50001": [
+    "reverse"
+   ],
+   "Q501058": [
+    "reverse"
+   ],
+   "Q501121": [
+    "reverse"
+   ],
+   "Q5014725": [
+    "reverse"
+   ],
+   "Q501758": [
+    "reverse"
+   ],
+   "Q503706": [
+    "reverse"
+   ],
+   "Q504309": [
+    "reverse"
+   ],
+   "Q504339": [
+    "reverse"
+   ],
+   "Q50527563": [
+    "reverse"
+   ],
+   "Q507001": [
+    "reverse"
+   ],
+   "Q5083": [
+    "reverse"
+   ],
+   "Q50868": [
+    "reverse"
+   ],
+   "Q51": [
+    "reverse"
+   ],
+   "Q5105": [
+    "reverse"
+   ],
+   "Q5107": [
+    "reverse"
+   ],
+   "Q511554": [
+    "reverse"
+   ],
+   "Q5119": [
+    "reverse"
+   ],
+   "Q513": [
+    "reverse"
+   ],
+   "Q515": [
+    "reverse"
+   ],
+   "Q51673": [
+    "reverse"
+   ],
+   "Q51684": [
+    "reverse"
+   ],
+   "Q517": [
+    "reverse"
+   ],
+   "Q51724": [
+    "reverse"
+   ],
+   "Q51885404": [
+    "reverse"
+   ],
+   "Q521371": [
+    "reverse"
+   ],
+   "Q523076": [
+    "reverse"
+   ],
+   "Q524": [
+    "reverse"
+   ],
+   "Q52463": [
+    "reverse"
+   ],
+   "Q5284438": [
+    "reverse"
+   ],
+   "Q53463": [
+    "reverse"
+   ],
+   "Q536138": [
+    "reverse"
+   ],
+   "Q5369": [
+    "reverse"
+   ],
+   "Q5372": [
+    "reverse"
+   ],
+   "Q5389": [
+    "reverse"
+   ],
+   "Q54093632": [
+    "reverse"
+   ],
+   "Q5419": [
+    "reverse"
+   ],
+   "Q54314": [
+    "reverse"
+   ],
+   "Q544": [
+    "reverse"
+   ],
+   "Q544387": [
+    "reverse"
+   ],
+   "Q5451": [
+    "reverse"
+   ],
+   "Q54527": [
+    "reverse"
+   ],
+   "Q545449": [
+    "reverse"
+   ],
+   "Q5492": [
+    "reverse"
+   ],
+   "Q55": [
+    "reverse"
+   ],
+   "Q5513": [
+    "reverse"
+   ],
+   "Q55400": [
+    "reverse"
+   ],
+   "Q55641": [
+    "reverse"
+   ],
+   "Q5577": [
+    "reverse"
+   ],
+   "Q559549": [
+    "reverse"
+   ],
+   "Q56008": [
+    "reverse"
+   ],
+   "Q5608": [
+    "reverse"
+   ],
+   "Q5682": [
+    "reverse"
+   ],
+   "Q568553": [
+    "reverse"
+   ],
+   "Q5686": [
+    "reverse"
+   ],
+   "Q5690": [
+    "reverse"
+   ],
+   "Q56942": [
+    "reverse"
+   ],
+   "Q569978": [
+    "reverse"
+   ],
+   "Q571": [
+    "reverse"
+   ],
+   "Q572134": [
+    "reverse"
+   ],
+   "Q578170": [
+    "reverse"
+   ],
+   "Q5794": [
+    "reverse"
+   ],
+   "Q580866": [
+    "reverse"
+   ],
+   "Q5816": [
+    "reverse"
+   ],
+   "Q583501": [
+    "reverse"
+   ],
+   "Q584451": [
+    "reverse"
+   ],
+   "Q586356": [
+    "reverse"
+   ],
+   "Q5878": [
+    "reverse"
+   ],
+   "Q588289": [
+    "reverse"
+   ],
+   "Q588820": [
+    "reverse"
+   ],
+   "Q591691": [
+    "reverse"
+   ],
+   "Q59259": [
+    "reverse"
+   ],
+   "Q59268408": [
+    "reverse"
+   ],
+   "Q5928": [
+    "reverse"
+   ],
+   "Q5977": [
+    "reverse"
+   ],
+   "Q60": [
+    "reverse"
+   ],
+   "Q6060": [
+    "reverse"
+   ],
+   "Q60617570": [
+    "reverse"
+   ],
+   "Q6078": [
+    "reverse"
+   ],
+   "Q61": [
+    "reverse"
+   ],
+   "Q6107": [
+    "reverse"
+   ],
+   "Q6138769": [
+    "reverse"
+   ],
+   "Q61478103": [
+    "reverse"
+   ],
+   "Q615": [
+    "reverse"
+   ],
+   "Q615908": [
+    "reverse"
+   ],
+   "Q6186": [
+    "reverse"
+   ],
+   "Q62": [
+    "reverse"
+   ],
+   "Q622747": [
+    "reverse"
+   ],
+   "Q622813": [
+    "reverse"
+   ],
+   "Q622988": [
+    "reverse"
+   ],
+   "Q6256": [
+    "reverse"
+   ],
+   "Q62766": [
+    "reverse"
+   ],
+   "Q6279": [
+    "reverse"
+   ],
+   "Q6294": [
+    "reverse"
+   ],
+   "Q63184502": [
+    "reverse"
+   ],
+   "Q634": [
+    "reverse"
+   ],
+   "Q634857": [
+    "reverse"
+   ],
+   "Q635": [
+    "reverse"
+   ],
+   "Q637137": [
+    "reverse"
+   ],
+   "Q638187": [
+    "reverse"
+   ],
+   "Q639669": [
+    "reverse"
+   ],
+   "Q64": [
+    "reverse"
+   ],
+   "Q640652": [
+    "reverse"
+   ],
+   "Q641740": [
+    "reverse"
+   ],
+   "Q642878": [
+    "reverse"
+   ],
+   "Q6452640": [
+    "reverse"
+   ],
+   "Q649": [
+    "reverse"
+   ],
+   "Q65": [
+    "reverse"
+   ],
+   "Q650816": [
+    "reverse"
+   ],
+   "Q650829": [
+    "reverse"
+   ],
+   "Q650840": [
+    "reverse"
+   ],
+   "Q650855": [
+    "reverse"
+   ],
+   "Q650865": [
+    "reverse"
+   ],
+   "Q6511": [
+    "reverse"
+   ],
+   "Q651231": [
+    "reverse"
+   ],
+   "Q6534": [
+    "reverse"
+   ],
+   "Q657": [
+    "reverse"
+   ],
+   "Q6581072": [
+    "reverse"
+   ],
+   "Q65932": [
+    "reverse"
+   ],
+   "Q6606110": [
+    "reverse"
+   ],
+   "Q66096": [
+    "reverse"
+   ],
+   "Q664": [
+    "reverse"
+   ],
+   "Q664609": [
+    "reverse"
+   ],
+   "Q6667429": [
+    "reverse"
+   ],
+   "Q667389": [
+    "reverse"
+   ],
+   "Q668": [
+    "reverse"
+   ],
+   "Q6683": [
+    "reverse"
+   ],
+   "Q6691": [
+    "reverse"
+   ],
+   "Q675493": [
+    "reverse"
+   ],
+   "Q676094": [
+    "reverse"
+   ],
+   "Q678383": [
+    "reverse"
+   ],
+   "Q679": [
+    "reverse"
+   ],
+   "Q683841": [
+    "reverse"
+   ],
+   "Q684425": [
+    "reverse"
+   ],
+   "Q688615": [
+    "reverse"
+   ],
+   "Q690974": [
+    "reverse"
+   ],
+   "Q692417": [
+    "reverse"
+   ],
+   "Q692989": [
+    "reverse"
+   ],
+   "Q6952926": [
+    "reverse"
+   ],
+   "Q699744": [
+    "reverse"
+   ],
+   "Q699776": [
+    "reverse"
+   ],
+   "Q699872": [
+    "reverse"
+   ],
+   "Q7058673": [
+    "reverse"
+   ],
+   "Q711": [
+    "reverse"
+   ],
+   "Q713750": [
+    "reverse"
+   ],
+   "Q713820": [
+    "reverse"
+   ],
+   "Q717": [
+    "reverse"
+   ],
+   "Q7174": [
+    "reverse"
+   ],
+   "Q717588": [
+    "reverse"
+   ],
+   "Q7184": [
+    "reverse"
+   ],
+   "Q7186": [
+    "reverse"
+   ],
+   "Q719": [
+    "reverse"
+   ],
+   "Q7204": [
+    "reverse"
+   ],
+   "Q7207": [
+    "reverse"
+   ],
+   "Q7209": [
+    "reverse"
+   ],
+   "Q723830": [
+    "reverse"
+   ],
+   "Q724": [
+    "reverse"
+   ],
+   "Q7243": [
+    "reverse"
+   ],
+   "Q7245": [
+    "reverse"
+   ],
+   "Q725902": [
+    "reverse"
+   ],
+   "Q727": [
+    "reverse"
+   ],
+   "Q7270": [
+    "reverse"
+   ],
+   "Q7278": [
+    "reverse"
+   ],
+   "Q727928": [
+    "reverse"
+   ],
+   "Q7320": [
+    "reverse"
+   ],
+   "Q7322": [
+    "reverse"
+   ],
+   "Q7346": [
+    "reverse"
+   ],
+   "Q735267": [
+    "reverse"
+   ],
+   "Q736": [
+    "reverse"
+   ],
+   "Q7366": [
+    "reverse"
+   ],
+   "Q739": [
+    "reverse"
+   ],
+   "Q739092": [
+    "reverse"
+   ],
+   "Q739499": [
+    "reverse"
+   ],
+   "Q739627": [
+    "reverse"
+   ],
+   "Q7414": [
+    "reverse"
+   ],
+   "Q74287": [
+    "reverse"
+   ],
+   "Q743309": [
+    "reverse"
+   ],
+   "Q746244": [
+    "reverse"
+   ],
+   "Q749502": [
+    "reverse"
+   ],
+   "Q750": [
+    "reverse"
+   ],
+   "Q751719": [
+    "reverse"
+   ],
+   "Q753679": [
+    "reverse"
+   ],
+   "Q7542": [
+    "reverse"
+   ],
+   "Q754718": [
+    "reverse"
+   ],
+   "Q76": [
+    "reverse"
+   ],
+   "Q771": [
+    "reverse"
+   ],
+   "Q771541": [
+    "reverse"
+   ],
+   "Q7737": [
+    "reverse"
+   ],
+   "Q7747": [
+    "reverse"
+   ],
+   "Q778412": [
+    "reverse"
+   ],
+   "Q7817": [
+    "reverse"
+   ],
+   "Q782": [
+    "reverse"
+   ],
+   "Q7857806": [
+    "reverse"
+   ],
+   "Q7859785": [
+    "reverse"
+   ],
+   "Q78762377": [
+    "reverse"
+   ],
+   "Q7889": [
+    "reverse"
+   ],
+   "Q79": [
+    "reverse"
+   ],
+   "Q79031": [
+    "reverse"
+   ],
+   "Q79037": [
+    "reverse"
+   ],
+   "Q794": [
+    "reverse"
+   ],
+   "Q7944": [
+    "reverse"
+   ],
+   "Q796": [
+    "reverse"
+   ],
+   "Q797": [
+    "reverse"
+   ],
+   "Q7972182": [
+    "reverse"
+   ],
+   "Q79904": [
+    "reverse"
+   ],
+   "Q79911": [
+    "reverse"
+   ],
+   "Q80069": [
+    "reverse"
+   ],
+   "Q8007": [
+    "reverse"
+   ],
+   "Q801": [
+    "reverse"
+   ],
+   "Q8016": [
+    "reverse"
+   ],
+   "Q8027": [
+    "reverse"
+   ],
+   "Q804": [
+    "reverse"
+   ],
+   "Q8072": [
+    "reverse"
+   ],
+   "Q8076": [
+    "reverse"
+   ],
+   "Q8079": [
+    "reverse"
+   ],
+   "Q807966": [
+    "reverse"
+   ],
+   "Q8093": [
+    "reverse"
+   ],
+   "Q80938": [
+    "reverse"
+   ],
+   "Q810": [
+    "reverse"
+   ],
+   "Q812": [
+    "reverse"
+   ],
+   "Q81328": [
+    "reverse"
+   ],
+   "Q81520": [
+    "reverse"
+   ],
+   "Q815352": [
+    "reverse"
+   ],
+   "Q815739": [
+    "reverse"
+   ],
+   "Q815979": [
+    "reverse"
+   ],
+   "Q816": [
+    "reverse"
+   ],
+   "Q817": [
+    "reverse"
+   ],
+   "Q817393": [
+    "reverse"
+   ],
+   "Q819": [
+    "reverse"
+   ],
+   "Q824": [
+    "reverse"
+   ],
+   "Q82414": [
+    "reverse"
+   ],
+   "Q8261": [
+    "reverse"
+   ],
+   "Q82664": [
+    "reverse"
+   ],
+   "Q828": [
+    "reverse"
+   ],
+   "Q828160": [
+    "reverse"
+   ],
+   "Q829": [
+    "reverse"
+   ],
+   "Q830079": [
+    "reverse"
+   ],
+   "Q83162": [
+    "reverse"
+   ],
+   "Q83186": [
+    "reverse"
+   ],
+   "Q83224": [
+    "reverse"
+   ],
+   "Q83265": [
+    "reverse"
+   ],
+   "Q833": [
+    "reverse"
+   ],
+   "Q8337": [
+    "reverse"
+   ],
+   "Q8338": [
+    "reverse"
+   ],
+   "Q8341": [
+    "reverse"
+   ],
+   "Q83431": [
+    "reverse"
+   ],
+   "Q83460": [
+    "reverse"
+   ],
+   "Q83468": [
+    "reverse"
+   ],
+   "Q83492": [
+    "reverse"
+   ],
+   "Q83958": [
+    "reverse"
+   ],
+   "Q84": [
+    "reverse"
+   ],
+   "Q8409": [
+    "reverse"
+   ],
+   "Q8415": [
+    "reverse"
+   ],
+   "Q842": [
+    "reverse"
+   ],
+   "Q842375": [
+    "reverse"
+   ],
+   "Q842408": [
+    "reverse"
+   ],
+   "Q842438": [
+    "reverse"
+   ],
+   "Q842606": [
+    "reverse"
+   ],
+   "Q84263196": [
+    "reverse"
+   ],
+   "Q843": [
+    "reverse"
+   ],
+   "Q8432": [
+    "reverse"
+   ],
+   "Q843219": [
+    "reverse"
+   ],
+   "Q844": [
+    "reverse"
+   ],
+   "Q845864": [
+    "reverse"
+   ],
+   "Q845884": [
+    "reverse"
+   ],
+   "Q846": [
+    "reverse"
+   ],
+   "Q8465": [
+    "reverse"
+   ],
+   "Q846570": [
+    "reverse"
+   ],
+   "Q846662": [
+    "reverse"
+   ],
+   "Q8470": [
+    "reverse"
+   ],
+   "Q8479": [
+    "reverse"
+   ],
+   "Q848103": [
+    "reverse"
+   ],
+   "Q8502": [
+    "reverse"
+   ],
+   "Q850292": [
+    "reverse"
+   ],
+   "Q851": [
+    "reverse"
+   ],
+   "Q8514": [
+    "reverse"
+   ],
+   "Q8531": [
+    "reverse"
+   ],
+   "Q853143": [
+    "reverse"
+   ],
+   "Q8539": [
+    "reverse"
+   ],
+   "Q855": [
+    "reverse"
+   ],
+   "Q855252": [
+    "reverse"
+   ],
+   "Q8558": [
+    "reverse"
+   ],
+   "Q856941": [
+    "reverse"
+   ],
+   "Q8575586": [
+    "reverse"
+   ],
+   "Q8577": [
+    "reverse"
+   ],
+   "Q858": [
+    "reverse"
+   ],
+   "Q858082": [
+    "reverse"
+   ],
+   "Q8613": [
+    "reverse"
+   ],
+   "Q864": [
+    "reverse"
+   ],
+   "Q8646": [
+    "reverse"
+   ],
+   "Q865": [
+    "reverse"
+   ],
+   "Q8652": [
+    "reverse"
+   ],
+   "Q86591": [
+    "reverse"
+   ],
+   "Q866": [
+    "reverse"
+   ],
+   "Q8663": [
+    "reverse"
+   ],
+   "Q8676": [
+    "reverse"
+   ],
+   "Q868": [
+    "reverse"
+   ],
+   "Q8680": [
+    "reverse"
+   ],
+   "Q8682": [
+    "reverse"
+   ],
+   "Q8684": [
+    "reverse"
+   ],
+   "Q869": [
+    "reverse"
+   ],
+   "Q869106": [
+    "reverse"
+   ],
+   "Q873": [
+    "reverse"
+   ],
+   "Q8733": [
+    "reverse"
+   ],
+   "Q8740": [
+    "reverse"
+   ],
+   "Q881": [
+    "reverse"
+   ],
+   "Q884": [
+    "reverse"
+   ],
+   "Q8877": [
+    "reverse"
+   ],
+   "Q8889": [
+    "reverse"
+   ],
+   "Q889": [
+    "reverse"
+   ],
+   "Q889821": [
+    "reverse"
+   ],
+   "Q892": [
+    "reverse"
+   ],
+   "Q90": [
+    "reverse"
+   ],
+   "Q902": [
+    "reverse"
+   ],
+   "Q9027": [
+    "reverse"
+   ],
+   "Q9036": [
+    "reverse"
+   ],
+   "Q904528": [
+    "reverse"
+   ],
+   "Q907311": [
+    "reverse"
+   ],
+   "Q91": [
+    "reverse"
+   ],
+   "Q911278": [
+    "reverse"
+   ],
+   "Q912994": [
+    "reverse"
+   ],
+   "Q916": [
+    "reverse"
+   ],
+   "Q9176": [
+    "reverse"
+   ],
+   "Q918224": [
+    "reverse"
+   ],
+   "Q9190": [
+    "reverse"
+   ],
+   "Q9219": [
+    "reverse"
+   ],
+   "Q923": [
+    "reverse"
+   ],
+   "Q924257": [
+    "reverse"
+   ],
+   "Q9259": [
+    "reverse"
+   ],
+   "Q92640": [
+    "reverse"
+   ],
+   "Q928": [
+    "reverse"
+   ],
+   "Q930354": [
+    "reverse"
+   ],
+   "Q93354": [
+    "reverse"
+   ],
+   "Q934987": [
+    "reverse"
+   ],
+   "Q935283": [
+    "reverse"
+   ],
+   "Q935843": [
+    "reverse"
+   ],
+   "Q941023": [
+    "reverse"
+   ],
+   "Q941818": [
+    "reverse"
+   ],
+   "Q9430": [
+    "reverse"
+   ],
+   "Q9439": [
+    "reverse"
+   ],
+   "Q9446": [
+    "reverse"
+   ],
+   "Q950309": [
+    "reverse"
+   ],
+   "Q953": [
+    "reverse"
+   ],
+   "Q953242": [
+    "reverse"
+   ],
+   "Q956": [
+    "reverse"
+   ],
+   "Q9588": [
+    "reverse"
+   ],
+   "Q96": [
+    "reverse"
+   ],
+   "Q9616": [
+    "reverse"
+   ],
+   "Q962": [
+    "reverse"
+   ],
+   "Q9671": [
+    "reverse"
+   ],
+   "Q9673": [
+    "reverse"
+   ],
+   "Q9674": [
+    "reverse"
+   ],
+   "Q9680": [
+    "reverse"
+   ],
+   "Q9682": [
+    "reverse"
+   ],
+   "Q9683": [
+    "reverse"
+   ],
+   "Q9684": [
+    "reverse"
+   ],
+   "Q9696": [
+    "reverse"
+   ],
+   "Q97": [
+    "reverse"
+   ],
+   "Q975": [
+    "reverse"
+   ],
+   "Q9759": [
+    "reverse"
+   ],
+   "Q98": [
+    "reverse"
+   ],
+   "Q987": [
+    "reverse"
+   ],
+   "Q988688": [
+    "reverse"
+   ],
+   "Q99": [
+    "reverse"
+   ],
+   "Q9903": [
+    "reverse"
+   ],
+   "Q9916": [
+    "reverse"
+   ],
+   "Q9960": [
+    "reverse"
+   ],
+   "Q996954": [
+    "reverse"
+   ]
+  }
+ },
+ "article_preflight": {
+  "n_entities": 2530,
+  "no_article": {
+   "Q104176043": "no_sitelink",
+   "Q109591891": "no_sitelink",
+   "Q1097498": "no_sitelink",
+   "Q113128346": "no_sitelink",
+   "Q11339468": "no_sitelink",
+   "Q11725941": "no_sitelink",
+   "Q12255650": "no_sitelink",
+   "Q14136211": "no_sitelink",
+   "Q14175641": "no_sitelink",
+   "Q1478420": "no_sitelink",
+   "Q15238167": "no_sitelink",
+   "Q15243387": "no_sitelink",
+   "Q16642701": "no_sitelink",
+   "Q17209231": "no_sitelink",
+   "Q19707372": "no_sitelink",
+   "Q20664267": "no_sitelink",
+   "Q2074089": "no_sitelink",
+   "Q20746728": "no_sitelink",
+   "Q20878491": "no_sitelink",
+   "Q21235663": "no_sitelink",
+   "Q22434295": "no_sitelink",
+   "Q2260776": "no_sitelink",
+   "Q22989102": "no_sitelink",
+   "Q23902998": "no_sitelink",
+   "Q25688688": "no_sitelink",
+   "Q2632527": "no_sitelink",
+   "Q2739222": "no_sitelink",
+   "Q27661474": "no_sitelink",
+   "Q29559108": "no_sitelink",
+   "Q3404008": "no_sitelink",
+   "Q3503133": "no_sitelink",
+   "Q3541019": "no_sitelink",
+   "Q37817870": "no_sitelink",
+   "Q42606536": "no_sitelink",
+   "Q49575116": "no_sitelink",
+   "Q56884377": "no_sitelink",
+   "Q60182049": "no_sitelink",
+   "Q60617706": "no_sitelink",
+   "Q60617940": "no_sitelink",
+   "Q61142657": "no_sitelink",
+   "Q67104271": "no_sitelink",
+   "Q7058673": "no_sitelink",
+   "Q75620595": "no_sitelink",
+   "Q79053462": "no_sitelink",
+   "Q88778441": "no_sitelink",
+   "Q88978231": "no_sitelink",
+   "Q8965313": "no_sitelink",
+   "Q91300798": "no_sitelink",
+   "Q91301291": "no_sitelink",
+   "Q9321397": "no_sitelink",
+   "Q95572541": "no_sitelink",
+   "Q96474678": "no_sitelink",
+   "Q97480595": "no_sitelink",
+   "Q99299974": "no_sitelink",
+   "Q99321612": "no_sitelink"
+  }
+ },
+ "specs": {
+  "schema_version": 1,
+  "captured_at": "2026-08-19T20:17:06",
+  "git": {
+   "sha": "c13fd540ae865c35825f439741d59716fb158a74",
+   "branch": "main",
+   "dirty": false,
+   "dirty_files": []
+  },
+  "model": {
+   "name": "nvidia/llama-3.3-nemotron-super-49b-v1",
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "temperature": 0,
+   "max_tokens": 128
+  },
+  "prompt_framing": {
+   "answer": {
+    "system": "detailed thinking off",
+    "preamble": "You are a factual question-answering assistant. Answer questions concisely and accurately. Answer with the fact only - no explanation, no restatement of the question.\n\n"
+   },
+   "condense": {
+    "system": "detailed thinking off",
+    "preamble": "You are a factual question-answering assistant. Answer questions concisely and accurately.\n\n"
+   }
+  },
+  "prompt_fragments": {
+   "ABSTAIN_SENTINEL": "The answer is not in the context.",
+   "ABSTAIN_CLAUSE": "Refuse if you don't find the answer and reply exactly: \"The answer is not in the context.\"",
+   "ABSTAIN_CLAUSE_C1": "Refuse if you don't find the answer and reply exactly: \"The answer is not in the context.\"",
+   "PROMPT_VARIANT": "f",
+   "ANSWER_INSTRUCTION": "Use the following information to answer the question as concisely as possible.",
+   "ANSWER_INSTRUCTION_NO_CONTEXT": "Answer the following question as concisely as possible.",
+   "ENTITY_BLOCK_MODE": "all"
+  },
+  "prompt_templates": {
+   "C1_base_llm": "Answer the following question as concisely as possible.\nRefuse if you don't find the answer and reply exactly: \"The answer is not in the context.\"\n\nQuestion: {question}\nAnswer:",
+   "C2_rag": "Use the following information to answer the question as concisely as possible.\nRefuse if you don't find the answer and reply exactly: \"The answer is not in the context.\"\n\n{entities}Context:\n{context}\n\nQuestion: {question}\nAnswer:",
+   "C3_graph_rag": "Use the following information to answer the question as concisely as possible.\nRefuse if you don't find the answer and reply exactly: \"The answer is not in the context.\"\n\n{entities}Context:\n{context}\n\nQuestion: {question}\nAnswer:",
+   "C4_answer": "Use the following information to answer the question as concisely as possible.\nRefuse if you don't find the answer and reply exactly: \"The answer is not in the context.\"\n\n{entities}Context:\n{context}\n\nQuestion: {question}\nAnswer:",
+   "C4_condense": "Given the following Wikidata facts and the question, select only the relevant facts and summarise them in at most two sentences.\nWrite only the facts themselves. Do not explain your reasoning, do not comment on what the facts fail to cover, and do not use knowledge beyond them.\n\n{entities}Facts:\n{top_k_facts}\n\nQuestion: {question}\nSummary:"
+  },
+  "retrieval": {
+   "active": {
+    "top_k": {
+     "C2": 30,
+     "C3": 30,
+     "C4": 30
+    },
+    "embedding_model": "multi-qa-MiniLM-L6-cos-v1",
+    "topk_allocation": "global",
+    "noise_filter_mode": "property_type",
+    "reverse_per_prop_cap": 30,
+    "statement_cache_version": 8,
+    "statement_row_limit": 4000,
+    "rank_policy": [
+     "preferred",
+     "normal"
+    ],
+    "label_langs": "en,mul",
+    "statement_query_attempts": 3,
+    "strict_retrieval": true,
+    "reverse_discovery_chunk": 500,
+    "reverse_fetch_batch": 20,
+    "follows_redirects": true,
+    "cache_fingerprint": {
+     "row_limit": 4000,
+     "label_langs": "en,mul",
+     "reverse_per_prop_cap": 30,
+     "reverse_discovery": "filter_exists_over_item_properties"
+    },
+    "article_cache_version": 1,
+    "article_cache_fingerprint": {
+     "chunk_size": 300,
+     "overlap": 50,
+     "source": "enwiki"
+    },
+    "article_strict_retrieval": true,
+    "article_fetch_attempts": 3
+   },
+   "dormant": {
+    "hops": 1
+   }
+  },
+  "context_construction": {
+   "per_entity_z_normalisation": {
+    "C2": true,
+    "C3": true,
+    "C4": true
+   },
+   "c3_c4_format": "bullet list under a 'Wikidata facts about X:' header",
+   "c2_format": "concatenated Wikipedia prose chunks"
+  },
+  "generation": {
+   "answer_max_tokens": 128,
+   "c4_condense_max_tokens": 384,
+   "c4_answer_max_tokens": 128,
+   "temperature": 0
+  }
+ },
+ "arms": {
+  "base_llm_abstain": {
+   "summary": {
+    "n": 4000,
+    "rows": 4000,
+    "graded": 4000,
+    "errors": 0,
+    "excluded": 0,
+    "abstention_pct": 12.2,
+    "correct_pct": 62.3,
+    "hallucination_pct": 24.8,
+    "other_pct": 0.7,
+    "truncated": 33,
+    "median_answer_words": 2,
+    "n_attempted": 3484,
+    "abstention_rate": 0.12225,
+    "coverage": 0.871,
+    "correct_rate": 0.62325,
+    "hallucination_rate": 0.24775,
+    "other_rate": 0.00675,
+    "em": 0.50825,
+    "f1": 0.5872281927261753,
+    "score": 0.6141848154843306,
+    "em_attempted": 0.5835246842709529,
+    "f1_attempted": 0.6741999916488809,
+    "correct_rate_attempted": 0.715556831228473,
+    "hallucination_rate_attempted": 0.284443168771527,
+    "context_words": null
+   }
+  },
+  "rag": {
+   "summary": {
+    "n": 4000,
+    "rows": 4000,
+    "graded": 4000,
+    "errors": 0,
+    "excluded": 0,
+    "abstention_pct": 44.0,
+    "correct_pct": 46.7,
+    "hallucination_pct": 9.0,
+    "other_pct": 0.4,
+    "truncated": 41,
+    "median_answer_words": 7,
+    "n_attempted": 2227,
+    "abstention_rate": 0.43975,
+    "coverage": 0.55675,
+    "correct_rate": 0.46675,
+    "hallucination_rate": 0.09,
+    "other_rate": 0.0035,
+    "em": 0.37725,
+    "f1": 0.4300315379146145,
+    "score": 0.4626001860863958,
+    "em_attempted": 0.6775931746744499,
+    "f1_attempted": 0.7723961165956255,
+    "correct_rate_attempted": 0.8383475527615626,
+    "hallucination_rate_attempted": 0.16165244723843736,
+    "context_words": 7683.679
+   }
+  },
+  "graph_rag": {
+   "summary": {
+    "n": 4000,
+    "rows": 4000,
+    "graded": 4000,
+    "errors": 0,
+    "excluded": 0,
+    "abstention_pct": 57.2,
+    "correct_pct": 34.2,
+    "hallucination_pct": 8.5,
+    "other_pct": 0.1,
+    "truncated": 6,
+    "median_answer_words": 7,
+    "n_attempted": 1707,
+    "abstention_rate": 0.57225,
+    "coverage": 0.42675,
+    "correct_rate": 0.34225,
+    "hallucination_rate": 0.0845,
+    "other_rate": 0.001,
+    "em": 0.306,
+    "f1": 0.3302471611435772,
+    "score": 0.33874420292895896,
+    "em_attempted": 0.7170474516695958,
+    "f1_attempted": 0.7738656382977791,
+    "correct_rate_attempted": 0.80199179847686,
+    "hallucination_rate_attempted": 0.19800820152314,
+    "context_words": 292.83375
+   }
+  },
+  "rerank": {
+   "summary": {
+    "n": 4000,
+    "rows": 4000,
+    "graded": 4000,
+    "errors": 0,
+    "excluded": 0,
+    "condense": {
+     "n": 3991,
+     "truncated": 9,
+     "truncated_pct": 0.2,
+     "median_words": 35,
+     "max_words": 300,
+     "fallback_instrumented": 4000,
+     "fallbacks": 9,
+     "fallbacks_empty_pool": 9
+    },
+    "abstention_pct": 50.9,
+    "correct_pct": 38.4,
+    "hallucination_pct": 10.6,
+    "other_pct": 0.0,
+    "truncated": 1,
+    "median_answer_words": 7,
+    "n_attempted": 1962,
+    "abstention_rate": 0.50925,
+    "coverage": 0.4905,
+    "correct_rate": 0.38425,
+    "hallucination_rate": 0.10625,
+    "other_rate": 0.00025,
+    "em": 0.34375,
+    "f1": 0.3747121715702598,
+    "score": 0.3802034021534022,
+    "em_attempted": 0.700815494393476,
+    "f1_attempted": 0.7639391877069518,
+    "correct_rate_attempted": 0.7833843017329256,
+    "hallucination_rate_attempted": 0.2166156982670744,
+    "context_words": 37.57375
+   }
+  }
+ },
+ "notes": "",
+ "completion": {
+  "documented_at": "2026-08-21T22:20:49",
+  "raw_file": "20260819_2017_mintaka_test_raw_raw.json",
+  "raw_sha256": "01b8b82c81c410aedc61aa4f3f58d4a762822007fcdec240c5ecd5a23328f627"
+ },
+ "operational": {
+  "workers": 2,
+  "completion_attempts": 20336,
+  "completion_responses": 20041,
+  "completion_exceptions": 295,
+  "responses_with_usage": 20041,
+  "includes_sdk_internal_retries": false,
+  "answers_recorded": 16000,
+  "truncated": 81,
+  "started": "20260819_201706"
+ },
+ "scoring": [
+  {
+   "scored_at": "2026-08-20T11:52:06",
+   "scorer_git_sha": "c13fd540ae865c35825f439741d59716fb158a74",
+   "scorer_tree_dirty": true,
+   "scorer_manifest_sha256": "7fff1ab5ff249d675a7bb038ec64ebf0c57933aa103bac142f0b29778d0ceecc",
+   "questions_file": "data/questions/mintaka_test_raw.json",
+   "questions_sha256": "2784aa9a047d86d23bb78645dad79c971478486f9520489915cd0a2d22ae547f",
+   "raw_sha256": "01b8b82c81c410aedc61aa4f3f58d4a762822007fcdec240c5ecd5a23328f627",
+   "threshold": 0.5,
+   "summaries": {
+    "base_llm_abstain": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "abstention_pct": 12.2,
+     "correct_pct": 62.3,
+     "hallucination_pct": 24.8,
+     "other_pct": 0.7,
+     "truncated": 33,
+     "median_answer_words": 2,
+     "n_attempted": 3484,
+     "abstention_rate": 0.12225,
+     "coverage": 0.871,
+     "correct_rate": 0.62325,
+     "hallucination_rate": 0.24775,
+     "other_rate": 0.00675,
+     "em": 0.50825,
+     "f1": 0.5872281927261753,
+     "score": 0.6141848154843306,
+     "em_attempted": 0.5835246842709529,
+     "f1_attempted": 0.6741999916488809,
+     "correct_rate_attempted": 0.715556831228473,
+     "hallucination_rate_attempted": 0.284443168771527,
+     "context_words": null
+    },
+    "rag": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "abstention_pct": 44.0,
+     "correct_pct": 46.7,
+     "hallucination_pct": 9.0,
+     "other_pct": 0.3,
+     "truncated": 41,
+     "median_answer_words": 7,
+     "n_attempted": 2227,
+     "abstention_rate": 0.43975,
+     "coverage": 0.55675,
+     "correct_rate": 0.46675,
+     "hallucination_rate": 0.09,
+     "other_rate": 0.0035,
+     "em": 0.37725,
+     "f1": 0.4300315379146145,
+     "score": 0.4626001860863958,
+     "em_attempted": 0.6775931746744499,
+     "f1_attempted": 0.7723961165956255,
+     "correct_rate_attempted": 0.8383475527615626,
+     "hallucination_rate_attempted": 0.16165244723843736,
+     "context_words": 7683.679
+    },
+    "graph_rag": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "abstention_pct": 57.2,
+     "correct_pct": 34.2,
+     "hallucination_pct": 8.4,
+     "other_pct": 0.1,
+     "truncated": 6,
+     "median_answer_words": 7,
+     "n_attempted": 1707,
+     "abstention_rate": 0.57225,
+     "coverage": 0.42675,
+     "correct_rate": 0.34225,
+     "hallucination_rate": 0.0845,
+     "other_rate": 0.001,
+     "em": 0.306,
+     "f1": 0.3302471611435772,
+     "score": 0.33874420292895896,
+     "em_attempted": 0.7170474516695958,
+     "f1_attempted": 0.7738656382977791,
+     "correct_rate_attempted": 0.80199179847686,
+     "hallucination_rate_attempted": 0.19800820152314,
+     "context_words": 292.83375
+    },
+    "rerank": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "condense": {
+      "n": 3991,
+      "truncated": 9,
+      "truncated_pct": 0.2,
+      "median_words": 35,
+      "max_words": 300,
+      "fallback_instrumented": 4000,
+      "fallbacks": 9
+     },
+     "abstention_pct": 50.9,
+     "correct_pct": 38.4,
+     "hallucination_pct": 10.6,
+     "other_pct": 0.0,
+     "truncated": 1,
+     "median_answer_words": 7,
+     "n_attempted": 1962,
+     "abstention_rate": 0.50925,
+     "coverage": 0.4905,
+     "correct_rate": 0.38425,
+     "hallucination_rate": 0.10625,
+     "other_rate": 0.00025,
+     "em": 0.34375,
+     "f1": 0.3747121715702598,
+     "score": 0.3802034021534022,
+     "em_attempted": 0.700815494393476,
+     "f1_attempted": 0.7639391877069518,
+     "correct_rate_attempted": 0.7833843017329256,
+     "hallucination_rate_attempted": 0.2166156982670744,
+     "context_words": 37.57375
+    }
+   },
+   "n_excluded_by_arm": {
+    "base_llm_abstain": 0,
+    "rag": 0,
+    "graph_rag": 0,
+    "rerank": 0
+   }
+  },
+  {
+   "scored_at": "2026-08-20T14:49:55",
+   "scorer_git_sha": "c13fd540ae865c35825f439741d59716fb158a74",
+   "scorer_tree_dirty": true,
+   "scorer_manifest_sha256": "0653a216133ab0eeecd3e3518f5f4e2aeadde5cca47662cdc86f079fc3a5fc78",
+   "questions_file": "data/questions/mintaka_test_raw.json",
+   "questions_sha256": "2784aa9a047d86d23bb78645dad79c971478486f9520489915cd0a2d22ae547f",
+   "raw_sha256": "01b8b82c81c410aedc61aa4f3f58d4a762822007fcdec240c5ecd5a23328f627",
+   "threshold": 0.5,
+   "summaries": {
+    "base_llm_abstain": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "abstention_pct": 12.2,
+     "correct_pct": 62.3,
+     "hallucination_pct": 24.8,
+     "other_pct": 0.7,
+     "truncated": 33,
+     "median_answer_words": 2,
+     "n_attempted": 3484,
+     "abstention_rate": 0.12225,
+     "coverage": 0.871,
+     "correct_rate": 0.62325,
+     "hallucination_rate": 0.24775,
+     "other_rate": 0.00675,
+     "em": 0.50825,
+     "f1": 0.5872281927261753,
+     "score": 0.6141848154843306,
+     "em_attempted": 0.5835246842709529,
+     "f1_attempted": 0.6741999916488809,
+     "correct_rate_attempted": 0.715556831228473,
+     "hallucination_rate_attempted": 0.284443168771527,
+     "context_words": null
+    },
+    "rag": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "abstention_pct": 44.0,
+     "correct_pct": 46.7,
+     "hallucination_pct": 9.0,
+     "other_pct": 0.4,
+     "truncated": 41,
+     "median_answer_words": 7,
+     "n_attempted": 2227,
+     "abstention_rate": 0.43975,
+     "coverage": 0.55675,
+     "correct_rate": 0.46675,
+     "hallucination_rate": 0.09,
+     "other_rate": 0.0035,
+     "em": 0.37725,
+     "f1": 0.4300315379146145,
+     "score": 0.4626001860863958,
+     "em_attempted": 0.6775931746744499,
+     "f1_attempted": 0.7723961165956255,
+     "correct_rate_attempted": 0.8383475527615626,
+     "hallucination_rate_attempted": 0.16165244723843736,
+     "context_words": 7683.679
+    },
+    "graph_rag": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "abstention_pct": 57.2,
+     "correct_pct": 34.2,
+     "hallucination_pct": 8.5,
+     "other_pct": 0.1,
+     "truncated": 6,
+     "median_answer_words": 7,
+     "n_attempted": 1707,
+     "abstention_rate": 0.57225,
+     "coverage": 0.42675,
+     "correct_rate": 0.34225,
+     "hallucination_rate": 0.0845,
+     "other_rate": 0.001,
+     "em": 0.306,
+     "f1": 0.3302471611435772,
+     "score": 0.33874420292895896,
+     "em_attempted": 0.7170474516695958,
+     "f1_attempted": 0.7738656382977791,
+     "correct_rate_attempted": 0.80199179847686,
+     "hallucination_rate_attempted": 0.19800820152314,
+     "context_words": 292.83375
+    },
+    "rerank": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "condense": {
+      "n": 3991,
+      "truncated": 9,
+      "truncated_pct": 0.2,
+      "median_words": 35,
+      "max_words": 300,
+      "fallback_instrumented": 4000,
+      "fallbacks": 9
+     },
+     "abstention_pct": 50.9,
+     "correct_pct": 38.4,
+     "hallucination_pct": 10.6,
+     "other_pct": 0.0,
+     "truncated": 1,
+     "median_answer_words": 7,
+     "n_attempted": 1962,
+     "abstention_rate": 0.50925,
+     "coverage": 0.4905,
+     "correct_rate": 0.38425,
+     "hallucination_rate": 0.10625,
+     "other_rate": 0.00025,
+     "em": 0.34375,
+     "f1": 0.3747121715702598,
+     "score": 0.3802034021534022,
+     "em_attempted": 0.700815494393476,
+     "f1_attempted": 0.7639391877069518,
+     "correct_rate_attempted": 0.7833843017329256,
+     "hallucination_rate_attempted": 0.2166156982670744,
+     "context_words": 37.57375
+    }
+   },
+   "n_excluded_by_arm": {
+    "base_llm_abstain": 0,
+    "rag": 0,
+    "graph_rag": 0,
+    "rerank": 0
+   }
+  },
+  {
+   "scored_at": "2026-08-20T18:03:08",
+   "scorer_git_sha": "982bc7c34fde1baeabce6cc09f181c6f625c6071",
+   "scorer_tree_dirty": false,
+   "scorer_manifest_sha256": "0653a216133ab0eeecd3e3518f5f4e2aeadde5cca47662cdc86f079fc3a5fc78",
+   "questions_file": "data/questions/mintaka_test_raw.json",
+   "questions_sha256": "2784aa9a047d86d23bb78645dad79c971478486f9520489915cd0a2d22ae547f",
+   "raw_sha256": "01b8b82c81c410aedc61aa4f3f58d4a762822007fcdec240c5ecd5a23328f627",
+   "threshold": 0.5,
+   "summaries": {
+    "base_llm_abstain": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "abstention_pct": 12.2,
+     "correct_pct": 62.3,
+     "hallucination_pct": 24.8,
+     "other_pct": 0.7,
+     "truncated": 33,
+     "median_answer_words": 2,
+     "n_attempted": 3484,
+     "abstention_rate": 0.12225,
+     "coverage": 0.871,
+     "correct_rate": 0.62325,
+     "hallucination_rate": 0.24775,
+     "other_rate": 0.00675,
+     "em": 0.50825,
+     "f1": 0.5872281927261753,
+     "score": 0.6141848154843306,
+     "em_attempted": 0.5835246842709529,
+     "f1_attempted": 0.6741999916488809,
+     "correct_rate_attempted": 0.715556831228473,
+     "hallucination_rate_attempted": 0.284443168771527,
+     "context_words": null
+    },
+    "rag": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "abstention_pct": 44.0,
+     "correct_pct": 46.7,
+     "hallucination_pct": 9.0,
+     "other_pct": 0.4,
+     "truncated": 41,
+     "median_answer_words": 7,
+     "n_attempted": 2227,
+     "abstention_rate": 0.43975,
+     "coverage": 0.55675,
+     "correct_rate": 0.46675,
+     "hallucination_rate": 0.09,
+     "other_rate": 0.0035,
+     "em": 0.37725,
+     "f1": 0.4300315379146145,
+     "score": 0.4626001860863958,
+     "em_attempted": 0.6775931746744499,
+     "f1_attempted": 0.7723961165956255,
+     "correct_rate_attempted": 0.8383475527615626,
+     "hallucination_rate_attempted": 0.16165244723843736,
+     "context_words": 7683.679
+    },
+    "graph_rag": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "abstention_pct": 57.2,
+     "correct_pct": 34.2,
+     "hallucination_pct": 8.5,
+     "other_pct": 0.1,
+     "truncated": 6,
+     "median_answer_words": 7,
+     "n_attempted": 1707,
+     "abstention_rate": 0.57225,
+     "coverage": 0.42675,
+     "correct_rate": 0.34225,
+     "hallucination_rate": 0.0845,
+     "other_rate": 0.001,
+     "em": 0.306,
+     "f1": 0.3302471611435772,
+     "score": 0.33874420292895896,
+     "em_attempted": 0.7170474516695958,
+     "f1_attempted": 0.7738656382977791,
+     "correct_rate_attempted": 0.80199179847686,
+     "hallucination_rate_attempted": 0.19800820152314,
+     "context_words": 292.83375
+    },
+    "rerank": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "condense": {
+      "n": 3991,
+      "truncated": 9,
+      "truncated_pct": 0.2,
+      "median_words": 35,
+      "max_words": 300,
+      "fallback_instrumented": 4000,
+      "fallbacks": 9
+     },
+     "abstention_pct": 50.9,
+     "correct_pct": 38.4,
+     "hallucination_pct": 10.6,
+     "other_pct": 0.0,
+     "truncated": 1,
+     "median_answer_words": 7,
+     "n_attempted": 1962,
+     "abstention_rate": 0.50925,
+     "coverage": 0.4905,
+     "correct_rate": 0.38425,
+     "hallucination_rate": 0.10625,
+     "other_rate": 0.00025,
+     "em": 0.34375,
+     "f1": 0.3747121715702598,
+     "score": 0.3802034021534022,
+     "em_attempted": 0.700815494393476,
+     "f1_attempted": 0.7639391877069518,
+     "correct_rate_attempted": 0.7833843017329256,
+     "hallucination_rate_attempted": 0.2166156982670744,
+     "context_words": 37.57375
+    }
+   },
+   "n_excluded_by_arm": {
+    "base_llm_abstain": 0,
+    "rag": 0,
+    "graph_rag": 0,
+    "rerank": 0
+   }
+  },
+  {
+   "scored_at": "2026-08-21T22:20:49",
+   "scorer_git_sha": "6bc1dfa859b904a77b2b8692c012d20527a6ab5b",
+   "scorer_tree_dirty": false,
+   "scorer_manifest_sha256": "ecd031f4b43303894d4c4347aa3d0d69aa1f8eda74c0d8cafd5076596583c12c",
+   "questions_file": "data/questions/mintaka_test_raw.json",
+   "questions_sha256": "2784aa9a047d86d23bb78645dad79c971478486f9520489915cd0a2d22ae547f",
+   "raw_sha256": "01b8b82c81c410aedc61aa4f3f58d4a762822007fcdec240c5ecd5a23328f627",
+   "threshold": 0.5,
+   "summaries": {
+    "base_llm_abstain": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "abstention_pct": 12.2,
+     "correct_pct": 62.3,
+     "hallucination_pct": 24.8,
+     "other_pct": 0.7,
+     "truncated": 33,
+     "median_answer_words": 2,
+     "n_attempted": 3484,
+     "abstention_rate": 0.12225,
+     "coverage": 0.871,
+     "correct_rate": 0.62325,
+     "hallucination_rate": 0.24775,
+     "other_rate": 0.00675,
+     "em": 0.50825,
+     "f1": 0.5872281927261753,
+     "score": 0.6141848154843306,
+     "em_attempted": 0.5835246842709529,
+     "f1_attempted": 0.6741999916488809,
+     "correct_rate_attempted": 0.715556831228473,
+     "hallucination_rate_attempted": 0.284443168771527,
+     "context_words": null
+    },
+    "rag": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "abstention_pct": 44.0,
+     "correct_pct": 46.7,
+     "hallucination_pct": 9.0,
+     "other_pct": 0.4,
+     "truncated": 41,
+     "median_answer_words": 7,
+     "n_attempted": 2227,
+     "abstention_rate": 0.43975,
+     "coverage": 0.55675,
+     "correct_rate": 0.46675,
+     "hallucination_rate": 0.09,
+     "other_rate": 0.0035,
+     "em": 0.37725,
+     "f1": 0.4300315379146145,
+     "score": 0.4626001860863958,
+     "em_attempted": 0.6775931746744499,
+     "f1_attempted": 0.7723961165956255,
+     "correct_rate_attempted": 0.8383475527615626,
+     "hallucination_rate_attempted": 0.16165244723843736,
+     "context_words": 7683.679
+    },
+    "graph_rag": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "abstention_pct": 57.2,
+     "correct_pct": 34.2,
+     "hallucination_pct": 8.5,
+     "other_pct": 0.1,
+     "truncated": 6,
+     "median_answer_words": 7,
+     "n_attempted": 1707,
+     "abstention_rate": 0.57225,
+     "coverage": 0.42675,
+     "correct_rate": 0.34225,
+     "hallucination_rate": 0.0845,
+     "other_rate": 0.001,
+     "em": 0.306,
+     "f1": 0.3302471611435772,
+     "score": 0.33874420292895896,
+     "em_attempted": 0.7170474516695958,
+     "f1_attempted": 0.7738656382977791,
+     "correct_rate_attempted": 0.80199179847686,
+     "hallucination_rate_attempted": 0.19800820152314,
+     "context_words": 292.83375
+    },
+    "rerank": {
+     "n": 4000,
+     "rows": 4000,
+     "graded": 4000,
+     "errors": 0,
+     "excluded": 0,
+     "condense": {
+      "n": 3991,
+      "truncated": 9,
+      "truncated_pct": 0.2,
+      "median_words": 35,
+      "max_words": 300,
+      "fallback_instrumented": 4000,
+      "fallbacks": 9,
+      "fallbacks_empty_pool": 9
+     },
+     "abstention_pct": 50.9,
+     "correct_pct": 38.4,
+     "hallucination_pct": 10.6,
+     "other_pct": 0.0,
+     "truncated": 1,
+     "median_answer_words": 7,
+     "n_attempted": 1962,
+     "abstention_rate": 0.50925,
+     "coverage": 0.4905,
+     "correct_rate": 0.38425,
+     "hallucination_rate": 0.10625,
+     "other_rate": 0.00025,
+     "em": 0.34375,
+     "f1": 0.3747121715702598,
+     "score": 0.3802034021534022,
+     "em_attempted": 0.700815494393476,
+     "f1_attempted": 0.7639391877069518,
+     "correct_rate_attempted": 0.7833843017329256,
+     "hallucination_rate_attempted": 0.2166156982670744,
+     "context_words": 37.57375
+    }
+   },
+   "n_excluded_by_arm": {
+    "base_llm_abstain": 0,
+    "rag": 0,
+    "graph_rag": 0,
+    "rerank": 0
+   }
+  }
+ ]
+}

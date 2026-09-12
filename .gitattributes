@@ -1,0 +1,3 @@
+# Preserve scientific evidence bytes and their recorded SHA-256 hashes.
+# Code and documentation outside data/ retain normal line-ending behaviour.
+data/** -text

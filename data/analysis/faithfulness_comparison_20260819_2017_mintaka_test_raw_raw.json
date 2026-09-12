@@ -1,0 +1,118 @@
+{
+ "input_file": "faithfulness_20260819_2017_mintaka_test_raw_raw.json",
+ "input_sha256": "bcd49dbd2bbd75b824da688d2b6129343f838b19cc99880cde17e6312935139a",
+ "seed": 0,
+ "n_resamples": 10000,
+ "p_value_kind": "two-sided percentile-bootstrap tail estimate; resolution 2/n_resamples; CIs nominal pointwise 95%, unadjusted",
+ "operating_point_means": {
+  "rag": {
+   "n": 2187,
+   "mean": 0.7229651070871927
+  },
+  "graph_rag": {
+   "n": 1674,
+   "mean": 0.6160420477493003
+  },
+  "rerank": {
+   "n": 1928,
+   "mean": 0.8587959816926901
+  }
+ },
+ "paired_common_scoreable": [
+  {
+   "pair": [
+    "graph_rag",
+    "rag"
+   ],
+   "bootstrap": {
+    "n": 1324,
+    "delta": -0.1007659924933783,
+    "ci_low": -0.13056145668994434,
+    "ci_high": -0.07209665075757132,
+    "p_value": 0.0,
+    "significant": true,
+    "n_dropped": 1213
+   }
+  },
+  {
+   "pair": [
+    "rerank",
+    "rag"
+   ],
+   "bootstrap": {
+    "n": 1394,
+    "delta": 0.1379149447082395,
+    "ci_low": 0.11242004782335188,
+    "ci_high": 0.16321860762478105,
+    "p_value": 0.0,
+    "significant": true,
+    "n_dropped": 1327
+   }
+  },
+  {
+   "pair": [
+    "rerank",
+    "graph_rag"
+   ],
+   "bootstrap": {
+    "n": 1498,
+    "delta": 0.2282799217545543,
+    "ci_low": 0.20580464076792518,
+    "ci_high": 0.2505919610726018,
+    "p_value": 0.0,
+    "significant": true,
+    "n_dropped": 606
+   }
+  }
+ ],
+ "correct_vs_wrong_unpaired": [
+  {
+   "config": "rag",
+   "n_correct": 1840,
+   "mean_correct": 0.7579018324670506,
+   "n_wrong": 347,
+   "mean_wrong": 0.5377098485888111,
+   "unpaired_bootstrap": {
+    "n_a": 1840,
+    "n_b": 347,
+    "delta": 0.22019198387823946,
+    "ci_low": 0.17048556222140387,
+    "ci_high": 0.27023420008568383,
+    "p_value": 0.0,
+    "significant": true
+   }
+  },
+  {
+   "config": "graph_rag",
+   "n_correct": 1343,
+   "mean_correct": 0.6503343087691121,
+   "n_wrong": 331,
+   "mean_wrong": 0.4769045657263181,
+   "unpaired_bootstrap": {
+    "n_a": 1343,
+    "n_b": 331,
+    "delta": 0.17342974304279402,
+    "ci_low": 0.1217119391676138,
+    "ci_high": 0.22550774653306643,
+    "p_value": 0.0,
+    "significant": true
+   }
+  },
+  {
+   "config": "rerank",
+   "n_correct": 1513,
+   "mean_correct": 0.8886739253773979,
+   "n_wrong": 415,
+   "mean_wrong": 0.7498674785722976,
+   "unpaired_bootstrap": {
+    "n_a": 1513,
+    "n_b": 415,
+    "delta": 0.13880644680510024,
+    "ci_low": 0.10137884970327371,
+    "ci_high": 0.17788558168954416,
+    "p_value": 0.0,
+    "significant": true
+   }
+  }
+ ]
+}

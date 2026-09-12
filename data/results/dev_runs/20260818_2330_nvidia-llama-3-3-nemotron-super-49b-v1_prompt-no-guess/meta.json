@@ -1,0 +1,895 @@
+{
+ "meta_schema_version": 1,
+ "run_id": "20260818_2330",
+ "slug": "prompt-no-guess",
+ "purpose": "prompt-abstention study arm no-guess (pre-registered, docs/prompt_abstention_study.md §3)",
+ "status": "complete",
+ "started_at": "20260818_233051",
+ "sample": {
+  "file": "data/questions/mintaka_sample_dev_200.json",
+  "n": 200,
+  "sha256": "bed8cb04e61ceccbbeccd60e6657b5a9d831d390cd3ab391e9db107307fdc9f4"
+ },
+ "start_settings": {
+  "workers": 2
+ },
+ "preflight": {
+  "n_entities": 238,
+  "truncated": {
+   "Q102427": [
+    "reverse"
+   ],
+   "Q103916": [
+    "reverse"
+   ],
+   "Q1046088": [
+    "reverse"
+   ],
+   "Q1066": [
+    "reverse"
+   ],
+   "Q10853588": [
+    "reverse"
+   ],
+   "Q1125021": [
+    "reverse"
+   ],
+   "Q11424": [
+    "reverse"
+   ],
+   "Q11571": [
+    "reverse"
+   ],
+   "Q1163715": [
+    "reverse"
+   ],
+   "Q11649": [
+    "reverse"
+   ],
+   "Q11679": [
+    "reverse"
+   ],
+   "Q11696": [
+    "reverse"
+   ],
+   "Q11701": [
+    "reverse"
+   ],
+   "Q11930": [
+    "reverse"
+   ],
+   "Q1196645": [
+    "reverse"
+   ],
+   "Q12003": [
+    "reverse"
+   ],
+   "Q1203": [
+    "reverse"
+   ],
+   "Q1215884": [
+    "reverse"
+   ],
+   "Q1215892": [
+    "reverse"
+   ],
+   "Q12391356": [
+    "reverse"
+   ],
+   "Q12393": [
+    "reverse"
+   ],
+   "Q12557": [
+    "reverse"
+   ],
+   "Q12560": [
+    "reverse"
+   ],
+   "Q125904": [
+    "reverse"
+   ],
+   "Q1261": [
+    "reverse"
+   ],
+   "Q131976": [
+    "reverse"
+   ],
+   "Q134969": [
+    "reverse"
+   ],
+   "Q1370": [
+    "reverse"
+   ],
+   "Q1384": [
+    "reverse"
+   ],
+   "Q1393": [
+    "reverse"
+   ],
+   "Q1397": [
+    "reverse"
+   ],
+   "Q1407": [
+    "reverse"
+   ],
+   "Q142": [
+    "reverse"
+   ],
+   "Q1439": [
+    "reverse"
+   ],
+   "Q145": [
+    "reverse"
+   ],
+   "Q15228": [
+    "reverse"
+   ],
+   "Q153056": [
+    "reverse"
+   ],
+   "Q154958": [
+    "reverse"
+   ],
+   "Q155": [
+    "reverse"
+   ],
+   "Q155223": [
+    "reverse"
+   ],
+   "Q1558": [
+    "reverse"
+   ],
+   "Q15615": [
+    "reverse"
+   ],
+   "Q1603": [
+    "reverse"
+   ],
+   "Q17": [
+    "reverse"
+   ],
+   "Q170263": [
+    "reverse"
+   ],
+   "Q172678": [
+    "reverse"
+   ],
+   "Q173": [
+    "reverse"
+   ],
+   "Q173496": [
+    "reverse"
+   ],
+   "Q1744": [
+    "reverse"
+   ],
+   "Q1747150": [
+    "reverse"
+   ],
+   "Q178750": [
+    "reverse"
+   ],
+   "Q181484": [
+    "reverse"
+   ],
+   "Q183492": [
+    "reverse"
+   ],
+   "Q184839": [
+    "reverse"
+   ],
+   "Q18642757": [
+    "reverse"
+   ],
+   "Q18756": [
+    "reverse"
+   ],
+   "Q190155": [
+    "reverse"
+   ],
+   "Q19020": [
+    "reverse"
+   ],
+   "Q192812": [
+    "reverse"
+   ],
+   "Q19610114": [
+    "reverse"
+   ],
+   "Q208408": [
+    "reverse"
+   ],
+   "Q2117272": [
+    "reverse"
+   ],
+   "Q211872": [
+    "reverse"
+   ],
+   "Q2133344": [
+    "reverse"
+   ],
+   "Q213417": [
+    "reverse"
+   ],
+   "Q213812": [
+    "reverse"
+   ],
+   "Q216930": [
+    "reverse"
+   ],
+   "Q220": [
+    "reverse"
+   ],
+   "Q222047": [
+    "reverse"
+   ],
+   "Q2263": [
+    "reverse"
+   ],
+   "Q23548": [
+    "reverse"
+   ],
+   "Q23666": [
+    "reverse"
+   ],
+   "Q23780734": [
+    "reverse"
+   ],
+   "Q241163": [
+    "reverse"
+   ],
+   "Q265538": [
+    "reverse"
+   ],
+   "Q268181": [
+    "reverse"
+   ],
+   "Q27593": [
+    "reverse"
+   ],
+   "Q277551": [
+    "reverse"
+   ],
+   "Q27950674": [
+    "reverse"
+   ],
+   "Q289": [
+    "reverse"
+   ],
+   "Q29468": [
+    "reverse"
+   ],
+   "Q29552": [
+    "reverse"
+   ],
+   "Q30": [
+    "reverse"
+   ],
+   "Q32096": [
+    "reverse"
+   ],
+   "Q3308007": [
+    "reverse"
+   ],
+   "Q33240": [
+    "reverse"
+   ],
+   "Q33999": [
+    "reverse"
+   ],
+   "Q35332": [
+    "reverse"
+   ],
+   "Q35657": [
+    "reverse"
+   ],
+   "Q36153": [
+    "reverse"
+   ],
+   "Q36159": [
+    "reverse"
+   ],
+   "Q362": [
+    "reverse"
+   ],
+   "Q364295": [
+    "reverse"
+   ],
+   "Q37175": [
+    "reverse"
+   ],
+   "Q3772": [
+    "reverse"
+   ],
+   "Q38022": [
+    "reverse"
+   ],
+   "Q38111": [
+    "reverse"
+   ],
+   "Q396": [
+    "reverse"
+   ],
+   "Q40096": [
+    "reverse"
+   ],
+   "Q405": [
+    "reverse"
+   ],
+   "Q41254": [
+    "reverse"
+   ],
+   "Q41396": [
+    "reverse"
+   ],
+   "Q41421": [
+    "reverse"
+   ],
+   "Q420292": [
+    "reverse"
+   ],
+   "Q42493": [
+    "reverse"
+   ],
+   "Q43919": [
+    "reverse"
+   ],
+   "Q441214": [
+    "reverse"
+   ],
+   "Q4439148": [
+    "reverse"
+   ],
+   "Q44703": [
+    "reverse"
+   ],
+   "Q458346": [
+    "reverse"
+   ],
+   "Q45875": [
+    "reverse"
+   ],
+   "Q46": [
+    "reverse"
+   ],
+   "Q462": [
+    "reverse"
+   ],
+   "Q4630676": [
+    "reverse"
+   ],
+   "Q4692": [
+    "reverse"
+   ],
+   "Q48": [
+    "reverse"
+   ],
+   "Q49": [
+    "reverse"
+   ],
+   "Q49201": [
+    "reverse"
+   ],
+   "Q49740": [
+    "reverse"
+   ],
+   "Q50868": [
+    "reverse"
+   ],
+   "Q5107": [
+    "reverse"
+   ],
+   "Q515": [
+    "reverse"
+   ],
+   "Q5389": [
+    "reverse"
+   ],
+   "Q545007": [
+    "reverse"
+   ],
+   "Q5451": [
+    "reverse"
+   ],
+   "Q546692": [
+    "reverse"
+   ],
+   "Q5484": [
+    "reverse"
+   ],
+   "Q5705738": [
+    "reverse"
+   ],
+   "Q57147": [
+    "reverse"
+   ],
+   "Q600344": [
+    "reverse"
+   ],
+   "Q615": [
+    "reverse"
+   ],
+   "Q62": [
+    "reverse"
+   ],
+   "Q6256": [
+    "reverse"
+   ],
+   "Q65": [
+    "reverse"
+   ],
+   "Q671069": [
+    "reverse"
+   ],
+   "Q7322": [
+    "reverse"
+   ],
+   "Q739499": [
+    "reverse"
+   ],
+   "Q745979": [
+    "reverse"
+   ],
+   "Q782": [
+    "reverse"
+   ],
+   "Q7889": [
+    "reverse"
+   ],
+   "Q79": [
+    "reverse"
+   ],
+   "Q7926203": [
+    "reverse"
+   ],
+   "Q797": [
+    "reverse"
+   ],
+   "Q812": [
+    "reverse"
+   ],
+   "Q81931": [
+    "reverse"
+   ],
+   "Q8337": [
+    "reverse"
+   ],
+   "Q844": [
+    "reverse"
+   ],
+   "Q864": [
+    "reverse"
+   ],
+   "Q8740": [
+    "reverse"
+   ],
+   "Q8877": [
+    "reverse"
+   ],
+   "Q889821": [
+    "reverse"
+   ],
+   "Q904528": [
+    "reverse"
+   ],
+   "Q95074": [
+    "reverse"
+   ],
+   "Q9960": [
+    "reverse"
+   ]
+  }
+ },
+ "article_preflight": {
+  "n_entities": 238,
+  "no_article": {
+   "Q14174302": "no_sitelink",
+   "Q14175641": "no_sitelink",
+   "Q2133344": "no_sitelink",
+   "Q29559108": "no_sitelink",
+   "Q4439148": "no_sitelink",
+   "Q5705738": "no_sitelink",
+   "Q94820254": "no_sitelink"
+  }
+ },
+ "specs": {
+  "schema_version": 1,
+  "captured_at": "2026-08-18T23:30:51",
+  "git": {
+   "sha": "7a70739bb5d7308e4edbb2b4eb2b9d34833fb312",
+   "branch": "main",
+   "dirty": true,
+   "dirty_files": [
+    ".gitignore",
+    "data/analysis/judge_validation_20260818_1113_reference-v8_raw.json",
+    "data/analysis/judge_validation_20260818_1113_reference-v8_raw.md",
+    "src/eval/run_eval.py",
+    "src/experiment_spec.py",
+    "src/llm_config.py",
+    "src/pipelines/base_llm.py",
+    "src/pipelines/graph_rag.py",
+    "src/pipelines/graph_rag_rerank.py",
+    "src/pipelines/rag.py",
+    "src/prompts.py",
+    "docs/prompt_abstention_study.md",
+    "tests/unit/test_prompt_variants.py",
+    "tools/review_judge_validation.py"
+   ]
+  },
+  "model": {
+   "name": "nvidia/llama-3.3-nemotron-super-49b-v1",
+   "base_url": "https://integrate.api.nvidia.com/v1",
+   "temperature": 0,
+   "max_tokens": 128
+  },
+  "prompt_framing": {
+   "answer": {
+    "system": "detailed thinking off",
+    "preamble": "You are a factual question-answering assistant. Answer questions concisely and accurately. Answer with the fact only - no explanation, no restatement of the question.\n\n"
+   },
+   "condense": {
+    "system": "detailed thinking off",
+    "preamble": "You are a factual question-answering assistant. Answer questions concisely and accurately.\n\n"
+   }
+  },
+  "prompt_fragments": {
+   "ABSTAIN_SENTINEL": "The answer is not in the context.",
+   "ABSTAIN_CLAUSE": "Do not guess. If you don't find the answer, reply exactly: \"The answer is not in the context.\"",
+   "ABSTAIN_CLAUSE_C1": "Do not guess. If you don't find the answer, reply exactly: \"The answer is not in the context.\"",
+   "PROMPT_VARIANT": "no-guess",
+   "ANSWER_INSTRUCTION": "Use the following information to answer the question as concisely as possible.",
+   "ANSWER_INSTRUCTION_NO_CONTEXT": "Answer the following question as concisely as possible.",
+   "ENTITY_BLOCK_MODE": "all"
+  },
+  "prompt_templates": {
+   "C1_base_llm": "Answer the following question as concisely as possible.\nDo not guess. If you don't find the answer, reply exactly: \"The answer is not in the context.\"\n\nQuestion: {question}\nAnswer:",
+   "C2_rag": "Use the following information to answer the question as concisely as possible.\nDo not guess. If you don't find the answer, reply exactly: \"The answer is not in the context.\"\n\n{entities}Context:\n{context}\n\nQuestion: {question}\nAnswer:",
+   "C3_graph_rag": "Use the following information to answer the question as concisely as possible.\nDo not guess. If you don't find the answer, reply exactly: \"The answer is not in the context.\"\n\n{entities}Context:\n{context}\n\nQuestion: {question}\nAnswer:",
+   "C4_answer": "Use the following information to answer the question as concisely as possible.\nDo not guess. If you don't find the answer, reply exactly: \"The answer is not in the context.\"\n\n{entities}Context:\n{context}\n\nQuestion: {question}\nAnswer:",
+   "C4_condense": "Given the following Wikidata facts and the question, select only the relevant facts and summarise them in at most two sentences.\nWrite only the facts themselves. Do not explain your reasoning, do not comment on what the facts fail to cover, and do not use knowledge beyond them.\n\n{entities}Facts:\n{top_k_facts}\n\nQuestion: {question}\nSummary:"
+  },
+  "retrieval": {
+   "active": {
+    "top_k": {
+     "C2": 30,
+     "C3": 30,
+     "C4": 30
+    },
+    "embedding_model": "multi-qa-MiniLM-L6-cos-v1",
+    "topk_allocation": "global",
+    "noise_filter_mode": "property_type",
+    "reverse_per_prop_cap": 30,
+    "statement_cache_version": 8,
+    "statement_row_limit": 4000,
+    "rank_policy": [
+     "preferred",
+     "normal"
+    ],
+    "label_langs": "en,mul",
+    "statement_query_attempts": 3,
+    "strict_retrieval": true,
+    "reverse_discovery_chunk": 500,
+    "reverse_fetch_batch": 20,
+    "follows_redirects": true,
+    "cache_fingerprint": {
+     "row_limit": 4000,
+     "label_langs": "en,mul",
+     "reverse_per_prop_cap": 30,
+     "reverse_discovery": "filter_exists_over_item_properties"
+    },
+    "article_cache_version": 1,
+    "article_cache_fingerprint": {
+     "chunk_size": 300,
+     "overlap": 50,
+     "source": "enwiki"
+    },
+    "article_strict_retrieval": true,
+    "article_fetch_attempts": 3
+   },
+   "dormant": {
+    "hops": 1
+   }
+  },
+  "context_construction": {
+   "per_entity_z_normalisation": {
+    "C2": true,
+    "C3": true,
+    "C4": true
+   },
+   "c3_c4_format": "bullet list under a 'Wikidata facts about X:' header",
+   "c2_format": "concatenated Wikipedia prose chunks"
+  },
+  "generation": {
+   "answer_max_tokens": 128,
+   "c4_condense_max_tokens": 384,
+   "c4_answer_max_tokens": 128,
+   "temperature": 0
+  }
+ },
+ "arms": {
+  "base_llm_abstain": {
+   "summary": {
+    "n": 200,
+    "rows": 200,
+    "graded": 200,
+    "errors": 0,
+    "excluded": 0,
+    "abstention_pct": 12.5,
+    "correct_pct": 65.5,
+    "hallucination_pct": 21.0,
+    "other_pct": 1.0,
+    "truncated": 2,
+    "median_answer_words": 2,
+    "n_attempted": 173,
+    "abstention_rate": 0.125,
+    "coverage": 0.865,
+    "correct_rate": 0.655,
+    "hallucination_rate": 0.21,
+    "other_rate": 0.01,
+    "em": 0.56,
+    "f1": 0.6315534553166132,
+    "score": 0.6490388033019613,
+    "em_attempted": 0.6473988439306358,
+    "f1_attempted": 0.7301196015220962,
+    "correct_rate_attempted": 0.7572254335260116,
+    "hallucination_rate_attempted": 0.24277456647398843,
+    "context_words": null
+   }
+  },
+  "rag": {
+   "summary": {
+    "n": 200,
+    "rows": 200,
+    "graded": 200,
+    "errors": 0,
+    "excluded": 0,
+    "abstention_pct": 41.0,
+    "correct_pct": 52.5,
+    "hallucination_pct": 6.0,
+    "other_pct": 0.5,
+    "truncated": 2,
+    "median_answer_words": 5,
+    "n_attempted": 117,
+    "abstention_rate": 0.41,
+    "coverage": 0.585,
+    "correct_rate": 0.525,
+    "hallucination_rate": 0.06,
+    "other_rate": 0.005,
+    "em": 0.405,
+    "f1": 0.4775381689221659,
+    "score": 0.5158916720534367,
+    "em_attempted": 0.6923076923076923,
+    "f1_attempted": 0.8163045622601126,
+    "correct_rate_attempted": 0.8974358974358975,
+    "hallucination_rate_attempted": 0.10256410256410256,
+    "context_words": 7487.445
+   }
+  },
+  "graph_rag": {
+   "summary": {
+    "n": 200,
+    "rows": 200,
+    "graded": 200,
+    "errors": 0,
+    "excluded": 0,
+    "abstention_pct": 54.5,
+    "correct_pct": 42.5,
+    "hallucination_pct": 3.0,
+    "other_pct": 0.0,
+    "truncated": 0,
+    "median_answer_words": 7,
+    "n_attempted": 91,
+    "abstention_rate": 0.545,
+    "coverage": 0.455,
+    "correct_rate": 0.425,
+    "hallucination_rate": 0.03,
+    "other_rate": 0.0,
+    "em": 0.375,
+    "f1": 0.4056515151515152,
+    "score": 0.42133333333333334,
+    "em_attempted": 0.8241758241758241,
+    "f1_attempted": 0.8915417915417917,
+    "correct_rate_attempted": 0.9340659340659341,
+    "hallucination_rate_attempted": 0.06593406593406594,
+    "context_words": 302.46
+   }
+  },
+  "rerank": {
+   "summary": {
+    "n": 200,
+    "rows": 200,
+    "graded": 200,
+    "errors": 0,
+    "excluded": 0,
+    "condense": {
+     "n": 200,
+     "truncated": 0,
+     "truncated_pct": 0.0,
+     "median_words": 33,
+     "max_words": 204
+    },
+    "abstention_pct": 49.0,
+    "correct_pct": 45.0,
+    "hallucination_pct": 6.0,
+    "other_pct": 0.0,
+    "truncated": 0,
+    "median_answer_words": 7,
+    "n_attempted": 102,
+    "abstention_rate": 0.49,
+    "coverage": 0.51,
+    "correct_rate": 0.45,
+    "hallucination_rate": 0.06,
+    "other_rate": 0.0,
+    "em": 0.41,
+    "f1": 0.43375407925407927,
+    "score": 0.44449999999999995,
+    "em_attempted": 0.803921568627451,
+    "f1_attempted": 0.8504981946158418,
+    "correct_rate_attempted": 0.8823529411764706,
+    "hallucination_rate_attempted": 0.11764705882352941,
+    "context_words": 36.48
+   }
+  }
+ },
+ "notes": "",
+ "completion": {
+  "documented_at": "2026-08-19T00:17:03",
+  "raw_file": "20260818_2330_prompt-no-guess_raw.json",
+  "raw_sha256": "44e5ef1cf0bd674d2d7a57d782bf203bace0de53dbc83f620c457be99e700c75",
+  "workers": 2,
+  "completion_attempts": 1029,
+  "completion_responses": 1004,
+  "completion_exceptions": 25,
+  "responses_with_usage": 1004,
+  "includes_sdk_internal_retries": false,
+  "answers_recorded": 800,
+  "truncated": 4,
+  "started": "20260818_233051"
+ },
+ "operational": {
+  "workers": 2,
+  "completion_attempts": 1029,
+  "completion_responses": 1004,
+  "completion_exceptions": 25,
+  "responses_with_usage": 1004,
+  "includes_sdk_internal_retries": false,
+  "answers_recorded": 800,
+  "truncated": 4,
+  "started": "20260818_233051"
+ },
+ "scoring": [
+  {
+   "scored_at": "2026-08-19T00:17:03",
+   "scorer_git_sha": "7a70739bb5d7308e4edbb2b4eb2b9d34833fb312",
+   "scorer_tree_dirty": true,
+   "scorer_manifest_sha256": "17585316800fed31f84c75f348d4073378db9b85543bcb471881732c8ee466a2",
+   "questions_file": "data/questions/mintaka_sample_dev_200.json",
+   "questions_sha256": "bed8cb04e61ceccbbeccd60e6657b5a9d831d390cd3ab391e9db107307fdc9f4",
+   "raw_sha256": "44e5ef1cf0bd674d2d7a57d782bf203bace0de53dbc83f620c457be99e700c75",
+   "threshold": 0.5,
+   "summaries": {
+    "base_llm_abstain": {
+     "n": 200,
+     "rows": 200,
+     "graded": 200,
+     "errors": 0,
+     "excluded": 0,
+     "abstention_pct": 12.5,
+     "correct_pct": 65.5,
+     "hallucination_pct": 21.0,
+     "other_pct": 1.0,
+     "truncated": 2,
+     "median_answer_words": 2,
+     "n_attempted": 173,
+     "abstention_rate": 0.125,
+     "coverage": 0.865,
+     "correct_rate": 0.655,
+     "hallucination_rate": 0.21,
+     "other_rate": 0.01,
+     "em": 0.56,
+     "f1": 0.6315534553166132,
+     "score": 0.6490388033019613,
+     "em_attempted": 0.6473988439306358,
+     "f1_attempted": 0.7301196015220962,
+     "correct_rate_attempted": 0.7572254335260116,
+     "hallucination_rate_attempted": 0.24277456647398843,
+     "context_words": null
+    },
+    "rag": {
+     "n": 200,
+     "rows": 200,
+     "graded": 200,
+     "errors": 0,
+     "excluded": 0,
+     "abstention_pct": 41.0,
+     "correct_pct": 52.5,
+     "hallucination_pct": 6.0,
+     "other_pct": 0.5,
+     "truncated": 2,
+     "median_answer_words": 5,
+     "n_attempted": 117,
+     "abstention_rate": 0.41,
+     "coverage": 0.585,
+     "correct_rate": 0.525,
+     "hallucination_rate": 0.06,
+     "other_rate": 0.005,
+     "em": 0.405,
+     "f1": 0.4775381689221659,
+     "score": 0.5158916720534367,
+     "em_attempted": 0.6923076923076923,
+     "f1_attempted": 0.8163045622601126,
+     "correct_rate_attempted": 0.8974358974358975,
+     "hallucination_rate_attempted": 0.10256410256410256,
+     "context_words": 7487.445
+    },
+    "graph_rag": {
+     "n": 200,
+     "rows": 200,
+     "graded": 200,
+     "errors": 0,
+     "excluded": 0,
+     "abstention_pct": 54.5,
+     "correct_pct": 42.5,
+     "hallucination_pct": 3.0,
+     "other_pct": 0.0,
+     "truncated": 0,
+     "median_answer_words": 7,
+     "n_attempted": 91,
+     "abstention_rate": 0.545,
+     "coverage": 0.455,
+     "correct_rate": 0.425,
+     "hallucination_rate": 0.03,
+     "other_rate": 0.0,
+     "em": 0.375,
+     "f1": 0.4056515151515152,
+     "score": 0.42133333333333334,
+     "em_attempted": 0.8241758241758241,
+     "f1_attempted": 0.8915417915417917,
+     "correct_rate_attempted": 0.9340659340659341,
+     "hallucination_rate_attempted": 0.06593406593406594,
+     "context_words": 302.46
+    },
+    "rerank": {
+     "n": 200,
+     "rows": 200,
+     "graded": 200,
+     "errors": 0,
+     "excluded": 0,
+     "condense": {
+      "n": 200,
+      "truncated": 0,
+      "truncated_pct": 0.0,
+      "median_words": 33,
+      "max_words": 204
+     },
+     "abstention_pct": 49.0,
+     "correct_pct": 45.0,
+     "hallucination_pct": 6.0,
+     "other_pct": 0.0,
+     "truncated": 0,
+     "median_answer_words": 7,
+     "n_attempted": 102,
+     "abstention_rate": 0.49,
+     "coverage": 0.51,
+     "correct_rate": 0.45,
+     "hallucination_rate": 0.06,
+     "other_rate": 0.0,
+     "em": 0.41,
+     "f1": 0.43375407925407927,
+     "score": 0.44449999999999995,
+     "em_attempted": 0.803921568627451,
+     "f1_attempted": 0.8504981946158418,
+     "correct_rate_attempted": 0.8823529411764706,
+     "hallucination_rate_attempted": 0.11764705882352941,
+     "context_words": 36.48
+    }
+   },
+   "n_excluded_by_arm": {
+    "base_llm_abstain": 0,
+    "rag": 0,
+    "graph_rag": 0,
+    "rerank": 0
+   }
+  }
+ ]
+}
